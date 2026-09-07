@@ -1,0 +1,1222 @@
+stats,en,ru
+ACT1_HAG_HagMask,Whispering Mask,Шепчущая маска
+ALCH_Extract_RoguesMorsel,Salts of Rogue's Morsel,
+ALCH_Ingredient_Part_OchreJellySlime,Ochre Jelly Slime,
+ALCH_Solution_Elixir_Alertness,Elixir of Vigilance,
+ALCH_Solution_Elixir_ArcaneAcuity,Elixir of Battlemage's Power,
+ALCH_Solution_Elixir_Barkskin,Elixir of Barkskin,
+ALCH_Solution_Elixir_Bloodlust,Elixir of Bloodlust,
+ALCH_Solution_Elixir_Concentration,Elixir of Peerless Focus,
+ALCH_Solution_Elixir_Criticals,Elixir of Viciousness,
+ALCH_Solution_Elixir_Darkvision,Elixir of Darkvision,
+ALCH_Solution_Elixir_Enlarge,Elixir of the Colossus,
+ALCH_Solution_Elixir_Freedom,Elixir of Guileful Movement,
+ALCH_Solution_Elixir_Meditation,Elixir of Arcane Cultivation,
+ALCH_Solution_Elixir_Meditation_Greater,Greater Elixir of Arcane Cultivation,
+ALCH_Solution_Elixir_Meditation_Superior,Superior Elixir of Arcane Cultivation,
+ALCH_Solution_Elixir_Meditation_Supreme,ELX Supreme Elixir of Arcane Cultivation Faded Icon.png,
+ALCH_Solution_Elixir_SeeInvisible,Elixir of See Invisibility,
+ALCH_Solution_Elixir_Tadpole,Tadpole Elixir,
+ALCH_Solution_Grenade_Light,Hearthlight Bomb,
+ALCH_Solution_Grenade_SporesConfusion,Fungal Bamboozler,
+ALCH_Solution_Grenade_SporesHaste,Haste Spore Grenade,
+ALCH_Solution_Grenade_SporesToxic,Noxious Spore Grenade,
+ALCH_Solution_Grenade_Web,Web Grenade,
+ALCH_Solution_Oil_AttackBuff,Oil of Accuracy,
+ALCH_Solution_Oil_Bane,Oil of Bane,
+ALCH_Solution_Oil_Combustion,Oil of Combustion,
+ALCH_Solution_Oil_DamageAttackBuff,Diluted Oil of Sharpness,
+ALCH_Solution_Oil_Frost,Oil of Freezing,
+ALCH_Solution_Oil_Reduce,Oil of Diminution,
+ALCH_Solution_Oil_RemoveResistanceFire,Arsonist's Oil,
+ALCH_Solution_Oil_Wizardsbane,Wizardsbane Oil,
+ALCH_Solution_Potion_DetectThoughts,Potion of Mind Reading,
+ALCH_Solution_Potion_FeatherFall,Potion of Feather Fall,
+ALCH_Solution_Potion_Flying,Potion of Flying,
+ALCH_Solution_Potion_Jump,Potion of Glorious Vaulting,
+ALCH_Solution_Potion_Remedy,Remedial Potion,
+ALCH_Solution_Potion_Rest_Greater,Potion of Angelic Slumber,
+ALCH_Solution_Potion_Rest_Lesser,Potion of Angelic Reprieve,
+ARM_Amulet,Bloody Amulet,Кровавый амулет
+ARM_Barbarian,Barbarian Clothes,Одежды варвара
+ARM_Bard,Simple Jerkin,Простая куртка
+ARM_BootsOfDimensionalDoor,Spaceshunt Boots,Сапоги космической охоты
+ARM_BootsOfSpeed,Boots of Speed,Башмаки скорости
+ARM_Boots_Leather,Leather Boots,Кожаные сапоги
+ARM_Boots_Leather_A,Appreciably-Cared-For Boots,
+ARM_Boots_Leather_B,Smarmy Swaggerer Boots,Сапоги подлизы-хвастуна
+ARM_Boots_Leather_C,Plain Boots,Простые сапоги
+ARM_Boots_Leather_D,Firm-Soled Boots,Сапоги на твердой подошве
+ARM_Boots_Leather_Druid,Grovetender Boots,Сапоги смотрителя рощи
+ARM_Boots_Leather_E,Tidy Slender Boots,Опрятные узкие сапоги
+ARM_Boots_Leather_F,Heavy Boots,Тяжелые сапоги
+ARM_Boots_Metal,Metallic Boots,Металлические сапоги
+ARM_Boots_Metal_Githyanki,Githyanki Boots,Сапоги гитьянки
+ARM_Breastplate_Body,+1 Breastplate,Нагрудник +1 (Обычный)
+ARM_Camp_Body,Homely Clothes,Домашняя одежда
+ARM_Camp_Body_Astarion,Astarion's Eccentric Clothes,
+ARM_Camp_Body_Gale,Gale's Austere Clothes,
+ARM_Camp_Body_Halsin,Halsin's Grove Garments,
+ARM_Camp_Body_Jaheira,Jaheira's Respectable Clothes,
+ARM_Camp_Body_Karlach,Karlach's Infernal Trousers,Дьявольские штаны Карлах
+ARM_Camp_Body_Minsc,Minsc's Fantastical Relaxation Garb,
+ARM_Camp_Body_Minthara,Minthara's At-Ease Clothes,
+ARM_Camp_Body_Shadowheart,Shadowheart's Clothes,
+ARM_Camp_Body_Wyll,Wyll's Earthy Garb,
+ARM_Camp_Shoes,Metallic Boots,Металлические сапоги
+ARM_Camp_Shoes_Astarion,Tasteful Boots,Стильные сапоги
+ARM_Camp_Shoes_F,Pointed-Toe Shoes,
+ARM_Camp_Shoes_Gale,Tasteful Boots,Стильные сапоги
+ARM_Camp_Shoes_Halsin,Tasteful Boots,Стильные сапоги
+ARM_Camp_Shoes_Jaheira,Tasteful Boots,Стильные сапоги
+ARM_Camp_Shoes_Karlach,Tasteful Boots,Стильные сапоги
+ARM_Camp_Shoes_Laezel,Tasteful Boots,Стильные сапоги
+ARM_Camp_Shoes_Minsc,Tasteful Boots,Стильные сапоги
+ARM_Camp_Shoes_Minthara,Tasteful Boots,Стильные сапоги
+ARM_Camp_Shoes_Shadowheart,Tasteful Boots,Стильные сапоги
+ARM_Camp_Shoes_Wyll,Tasteful Boots,Стильные сапоги
+ARM_ChainMail_Body_1,Chain Mail +1,Кольчужный доспех +1
+ARM_ChainShirt_Body,Chain Shirt,Кольчужная рубаха
+ARM_ChainShirt_Body_1,Chain Shirt +1,Кольчужная рубаха +1
+ARM_ChainShirt_Body_Shar,Chain Shirt,Кольчужная рубаха
+ARM_Cloak,Phasmid Cloak,
+ARM_DrunkGoblinRing,Crusher's Ring,Кольцо Хрупа
+ARM_Gloves_Leather,Leather Gloves,Кожаные перчатки
+ARM_Gloves_Leather_Minsc,Leather Gloves,Кожаные перчатки
+ARM_Gloves_Metal,Metallic Gloves,Металлические перчатки
+ARM_HalfPlate_Body,Half Plate Armour,Неполные латы
+ARM_HalfPlate_Body_2,Half Plate Armour +2,Неполные латы +2
+ARM_HalfPlate_Body_Githyanki,Githyanki Half Plate,Неполные латы гитьянки
+ARM_Hat,Frumpy Hat,
+ARM_Hat_MuffinHat_A,Ignoble Hat,Неблагородная шляпа
+ARM_Hat_MuffinHat_B,Rufflesome Blaggart Hat,Шляпа горячащегося болтуна
+ARM_Hat_Wizard_A,Wizard Hat,Шляпа волшебника
+ARM_Hat_Wizard_B,Old Floppy Hat,Старая мягкая шляпа
+ARM_Hat_Wizard_C,Bycocket,Байкокет
+ARM_Hat_Wizard_D,Brimmed Hat,Шляпа с полями
+ARM_Hat_Wizard_E,Embroidered Hat,Вышитая шляпа
+ARM_Hat_Wizard_F,Embroidered Bycocket,Вышитый байкокет
+ARM_Hat_Wizard_G,Wide-Brimmed Hat,
+ARM_Hat_Wizard_H,Snakeskin Hat,Шляпа из змеиной кожи
+ARM_HeadbandOfIntellect,Headband of Intellect,
+ARM_Helmet_Leather,Leather Helmet,Кожаный шлем
+ARM_Helmet_Metal,Cracked Helm of Shar,Треснувший шлем Шар
+ARM_Hide_Body,Hide Armour,Сыромятный доспех
+ARM_Hide_Body_1,Hide Armour +1,Сыромятный доспех +1
+ARM_Hide_Body_2,Hide Armour +2,Сыромятный доспех +2
+ARM_Instrument_Drum,Hand Drum,Малый барабан
+ARM_Instrument_Flute,Flute,
+ARM_Instrument_Lute,Battered Lute,
+ARM_Instrument_Lute_B,Alfira's Lute,
+ARM_Instrument_Lyre,Lyre,
+ARM_Jester_Hat,Cap and Bells,
+ARM_Leather_1_Red,Scarlet Leather Armour,Алый кожаный доспех
+ARM_Leather_Body,Leather Armour,Кожаный доспех
+ARM_Leather_Body_1,Leather Armour +1,Кожаный доспех +1
+ARM_Leather_Body_Druid,Druid Leather Armour,Друидский кожаный доспех
+ARM_Leather_Body_Minsc,Leather Armour,Кожаный доспех
+ARM_Leather_Body_Rogue,Leather Armour,Кожаный доспех
+ARM_MerregonMask,Devilfoil Mask,Маска из адского металла
+ARM_Monk,Monastic Robes,Монашеское одеяние
+ARM_Padded_Body,Broken Padded Armour,
+ARM_Padded_Body_2,Padded Armour +2,Стеганый доспех +2
+ARM_Plate_Body,Plate Armour,Латы
+ARM_Plate_Body_1,Nightsong's Armour,
+ARM_Plate_Body_2,Plate Armour +2,Латы +2
+ARM_RingMail_Body,Ring Mail Armour,Кольчатый доспех
+ARM_RingOfPoisonResistance,Ring of Poison Resistance,Кольцо устойчивости к яду
+ARM_Robe_1,Robe +1,
+ARM_Robe_Body,Clothes,Одежда
+ARM_Robe_Body_Sorcerer,Sorcerer Robe,Мантия чародея
+ARM_Robe_Body_Sorcerer_DraconicAncestry,Sorcerer Robe,Мантия чародея
+ARM_Robe_Body_Sorcerer_StormSorcery,Sorcerer Robe,Мантия чародея
+ARM_Robe_CultOfAbsolute,Simple Robe,Простая мантия
+ARM_Robe_Selunite,Selûnite Robe,Селунитское одеяние
+ARM_ScaleMail_Body,Scale Mail,Чешуйчатый доспех
+ARM_ScaleMail_Body_2,Scale Mail +2,Чешуйчатый доспех +2
+ARM_ScaleMail_Body_Paladin_Ancients,Scale Mail of the Ancients,Чешуйчатый доспех древних
+ARM_ScaleMail_Body_Paladin_Crown,Scale Mail of the Crown,
+ARM_ScaleMail_Body_Paladin_Devotion,Scale Mail of Devotion,Чешуйчатый доспех верности
+ARM_ScaleMail_Body_Paladin_Vengeance,Scale Mail of Vengeance,Чешуйчатый доспех отмщения
+ARM_Shield,Iron-Banded Shield,Окованный железом щит
+ARM_Shield1,Iron-Banded Shield +1,Окованный железом щит +1
+ARM_Shield_1,Iron-Banded Shield +1,Окованный железом щит +1
+ARM_Shoes,Curled-Toe Boots,
+ARM_Shoes_A,Hardily Constructed Boots,Крепко сбитые сапоги
+ARM_Shoes_B,Tough Shoes,
+ARM_Shoes_Barbarian,Leather Boots,Кожаные сапоги
+ARM_Shoes_C,Thin-Soled Shoes,
+ARM_Shoes_D,Cleverly Cobbled Boots,
+ARM_Shoes_E,Soft and Comfortable Shoes,
+ARM_Shoes_F,Tough-Soled Shoes,
+ARM_Shoes_G,Humbly Cobbled Shoes,
+ARM_Shoes_H,Quite Fashionable Boots,
+ARM_Shoes_Monk,Monastic Boots,Монашеские башмаки
+ARM_StuddedLeather_Body_2,Studded Leather Armour +2,Клепаный кожаный доспех +2
+ARM_StuddedLeather_Body_Drow,Drow Studded Leather Armour,Клепаный кожаный доспех дроу
+ARM_TalismanOfJergal,The Amulet of Lost Voices,Амулет заблудших голосов
+ARM_Underwear,Underwear/Base Armour,
+ARM_Underwear_Dragonborn,Underwear/Dragonborn,
+ARM_Underwear_Dragonborn_Bronze,Underwear/Dragonborn,
+ARM_Underwear_HalfOrcs,Underwear/Half-Orc,
+ARM_Underwear_HalfOrcs_Orange,Underwear/Half-Orc,
+ARM_Underwear_Helper,Underwear/Helper,
+ARM_Underwear_Incubus,Underwear/Incubus,
+ARM_Vanity_Body_Aristocrat,Sweetly Tailored Outfit,
+ARM_Vanity_Body_Aristocrat_Brown,Chocolatier Style Doublet,
+ARM_Vanity_Body_Aristocrat_White,Winter Gala Doublet,
+ARM_Vanity_Body_Citizen,Comfortable Blue-Red Outfit,
+ARM_Vanity_Body_Citizen_B,Spring Slimfit Outfit,
+ARM_Vanity_Body_Citizen_B_Teal,Teal Slimfit Outfit,
+ARM_Vanity_Body_Citizen_Black,Comfortable Ashmeadow Outfit,
+ARM_Vanity_Body_Citizen_C,Swarthy Wayfarer in Cream,
+ARM_Vanity_Body_Citizen_C_Blue,Swarthy Wayfarer in Blue,
+ARM_Vanity_Body_Citizen_C_Green,Swarthy Wayfarer in Green,
+ARM_Vanity_Body_Citizen_C_Red,Swarthy Wayfarer in Red,
+ARM_Vanity_Body_Citizen_Purple,Comfortable Autumnal Outfit,
+ARM_Vanity_Body_Cultist,Absolute Outfit,
+ARM_Vanity_Body_Deva,Angelic Scion Outfit,
+ARM_Vanity_Body_Drow,Drow Outfit,
+ARM_Vanity_Body_Leather,Leathery Garb,
+ARM_Vanity_Body_Leather_Black,Black Flare Leather Outfit,
+ARM_Vanity_Body_Leather_Bright,Bright Flare Leather Outfit,
+ARM_Vanity_Body_Leather_Rich,Strapped Choker Leather Ensemble,
+ARM_Vanity_Body_Leather_Rich_Blue,Blue Flare Leather Outfit,
+ARM_Vanity_Body_Leather_Rich_Green,Green Flare Leather Outfit,
+ARM_Vanity_Body_Pants,Umber Trousers,
+ARM_Vanity_Body_Patriars,Magnificently Realised Ensemble,
+ARM_Vanity_Body_Patriars_Black,Eminent Obsidian Outfit,
+ARM_Vanity_Body_Patriars_Blue,Opalescent Outfit,
+ARM_Vanity_Body_Patriars_Green,Eminent Emerald Outfit,
+ARM_Vanity_Body_Patriars_Red,City of Brass Outfit,
+ARM_Vanity_Body_Refugee,Rustic Dark Outfit,
+ARM_Vanity_Body_Refugee_Gray,Road-Dust Grey Clothes,
+ARM_Vanity_Body_Refugee_Green,Scruffy Vagabond Clothes,
+ARM_Vanity_Body_Rich,Splendid Outfit,
+ARM_Vanity_Body_Rich_B,Delicately Constructed Outfit,
+ARM_Vanity_Body_Rich_B1,Fastidiously Perfect Outfit,
+ARM_Vanity_Body_Rich_B1_Beige,Splendid Beige Outfit,
+ARM_Vanity_Body_Rich_B_Purple,Splendid Purple Outfit,
+ARM_Vanity_Body_Rich_C,Chandelier-Style Embroidered Ensemble,
+ARM_Vanity_Body_Rich_C_Blue,Splendid Blue Outfit,
+ARM_Vanity_Body_Rich_C_Red,Splendid Red Outfit,
+ARM_Vanity_Body_Rich_D,Backless Extravaganza,
+ARM_Vanity_Body_Rich_D_Blue,Anarchic Blue Outfit,
+ARM_Vanity_Body_Rich_D_Puple,Anarchic Purple Outfit,
+ARM_Vanity_Body_Rich_D_White,Anarchic White Outfit,
+ARM_Vanity_Body_Rich_E,Lionheart Outfit,
+ARM_Vanity_Body_Rich_E_GreenPink,Lionheart Green-Pink Outfit,
+ARM_Vanity_Body_Rich_E_Teal,Lionheart Teal Outfit,
+ARM_Vanity_Body_Rich_F,Diamond Pattern Garb,
+ARM_Vanity_Body_Rich_F_Blue,Diamond Blue Doublet,
+ARM_Vanity_Body_Rich_G,Raffish Garb,
+ARM_Vanity_Body_Rich_G2,Solemnity Outfit,
+ARM_Vanity_Body_Rich_G2_Blue,Solemnity Outfit in Blue,
+ARM_Vanity_Body_Rich_G2_Green,Solemnity Outfit in Green,
+ARM_Vanity_Body_Rich_G2_Purple,Solemnity Outfit in Purple,
+ARM_Vanity_Body_Rich_G2_White,Solemnity Outfit in Gold Medallions,
+ARM_Vanity_Body_Rich_G_Black,Raffish Midnight Outfit,
+ARM_Vanity_Body_Rich_G_Bright,Raffish Metallic-Shaded Outfit,
+ARM_Vanity_Body_Rich_G_Brown,Raffish Chestnut Outfit,
+ARM_Vanity_Body_Rich_G_Red,Raffish Bronze-Red Outfit,
+ARM_Vanity_Body_Rich_Gold,Splendid Gold Outfit,
+ARM_Vanity_Body_Rich_Green,Splendid Green Outfit,
+ARM_Vanity_Body_Rich_Teal,Splendid Teal Outfit,
+ARM_Vanity_Body_Shirt_Black,Mellow Black Shirt,
+ARM_Vanity_Body_Shirt_Blue,Cosy Blue Shirt,
+ARM_Vanity_Body_Shirt_Green,Snugglesome Green Shirt,
+ARM_Vanity_Body_Shirt_Purple,Snug Purple Shirt,
+ARM_Vanity_Body_Shirt_Red,Comfortable Red Shirt,
+ARM_Vanity_ElegantRobe,Elegant Robe,
+BOOK_GEN_World_TalesOfTheHells,Tales Of The Hells,
+BOOK_GLO_GeneralLoreBook_MoradinTheSoulForger,The Soul Forger,
+BOOK_GLO_GeneralLoreBook_TheLadyOfLuck,"Tymora, Lady Luck",
+CHA_CompassSpear,The Watcher's Guide,Путеводная нить хранителя
+CONS_Berry,Raspberry,
+CONS_DRINK_Milk,Milk bowl,
+CONS_DRINK_Oil,Cup of Oil,
+CONS_DRINK_Water,Cup of Water,
+CONS_DRINK_Water_Bottle,Water,
+CONS_DRINK_Water_Bottle_Wicker,Water,
+CONS_Drug_Dreammist,Dream Mist,
+CONS_Drug_Ether,Essence of Ether,
+CONS_Drug_Silkroot,Silkroot,
+CONS_Drug_Terazul,Terazul,
+CONS_FOOD_Fruit_Apple,Red Apple,
+CONS_FOOD_PezhKuresh,Chelo Khoresh,
+CONS_FOOD_Seafood,Seafood Bouillabaisse,
+CONS_FOOD_Stew,Neverwinter Stew,
+CONS_GEN_FOOD_Tart_Treacle_Spoiled,Spoiled Treacle Tart,
+CONS_GenericFoodItem,Gruel,
+CRA_HermitCrab_Ring,Ring of Crabsight,
+CRE_BloodOfLathander,The Blood of Lathander,Кровь Латандера
+CRE_Hatchery_AcidPoisonImmunity_Boots,Varsh Ko'kuu's Boots,Обувь Варш Кокуу
+CRE_MAG_Githborn_Amulet,Aberration Hunters' Amulet,Амулет охотников на аберрации
+CRE_MAG_Psychic_Githborn_Circlet,Circlet of Psionic Revenge,Обруч псионической мести
+DEN_Apprentice_Antidote,Elixir of Silvanus,
+DEN_Apprentice_DaggerOfShar,Dagger of Shar,
+DEN_BearReward_Amulet,Amulet of Silvanus,Амулет Сильвануса
+DEN_CapturedGoblin_MurderDagger,Assassin's Touch,Касание ассасина
+DEN_FaithwardenStaff,Pale Oak,Бледный дуб
+DEN_HalsinBlade,Sorrow,Скорбь
+DEN_HarpyMeal_NestRing,Ring of Colour Spray,Кольцо цветных брызг
+DEN_HellridersPride,Hellrider's Pride,Гордость адского всадника
+DEN_PoisonousThorn,Kelemvor's Kiss Branch,
+DEN_RaidingParty_GoblinCaptain_Gloves,Gloves of Power,Перчатки силы
+DEN_TunnelStaff,Nature's Snare,Силки природы
+DLC_DD_Portrait_Beast,Portrait of Marcus Miles,
+DLC_DD_Portrait_Fane,Portrait of Fane,
+DLC_DD_Portrait_Ifan,Portrait of Ifan ben-Mezd,
+DLC_DD_Portrait_Lohse,Portrait of Lohse,
+DLC_DD_Portrait_Red_Prince,Portrait of the Red Prince,
+DLC_DD_Portrait_Sebille,Portrait of Sebille Kaleran,
+DLC_DD_Red_Price_Cloak,Cape of the Red Prince,Накидка Красного Принца
+DLC_OBJ_Dye_Larian,Drake General Dye,
+END_Emperor_Staff,Staff of the Emperor,Посох Императора
+FOR_DeathOfATrueSoul_TrueSoul_Ring,Absolute's Smite,
+FOR_IncompleteMasterwork_SussurDagger,Sussur Dagger,Кинжал из суссура
+FOR_IncompleteMasterwork_SussurGreatsword,Sussur Greatsword,Двуручный меч из суссура
+FOR_IncompleteMasterwork_SussurSickle,Sussur Sickle,Серп из суссура
+FOR_NightWalkers,Disintegrating Night Walkers,"Разваливающиеся ""Ночные шаги"""
+FOR_OgresForHire_HeadbandOfIntellect,Warped Headband of Intellect,Погнутый обруч интеллекта
+FOR_OwlbearCubs_Armor,The Oak Father's Embrace,Объятие Сильвануса
+FOR_SpiderQueen_Robe,Poisoner's Robe,Мантия отравителя
+FOR_SpiderstepBoots,Spiderstep Boots,Сапоги паучьей поступи
+FOR_TrueSoul_Spear,Vision of the Absolute,Видение Абсолют
+GLO_CursedIronFlask,Iron Flask,
+GLO_DevilishOx_Fruit_Apple,Strange Apple,
+GLO_SoulCoin,Soul Coin,
+GOB_DrowCommander_Amulet,Amulet of Misty Step,Амулет туманного шага
+GOB_DrowCommander_Leather_Armor,Spidersilk Armour,Паутинный доспех
+GOB_DrowCommander_Leather_Gloves,Drow Leather Gloves,Кожаные перчатки дроу
+GOB_DrowCommander_Mace,Xyanyde,Ксианид
+GOB_GoblinKing_Warhammer,Faithbreaker,Веролом
+GOB_PainPriest_Dagger,Ritual Dagger,Ритуальный кинжал
+GOB_PainPriest_Handaxe,Ritual Axe,Ритуальный топор
+GOB_PainPriest_Scourge,Loviatar's Scourge,Бич Ловиатар
+GOB_Pens_Dagger,Goblinbane Dagger,
+GOB_Priest_Amulet,Absolute's Talisman,Талисман Абсолют
+GOB_Priest_Shield,Absolute's Warboard,Боевая доска Абсолют
+GOB_RoastingDwarf_Meat,Roasted Dwarf Belly,
+GOB_Torturer_Spear,Jagged Spear,Зазубренное копье
+GRN_Spore_Haste,Haste Spore Flask,
+HAG_EyeballNecklace,The Ever-Seeing Eye,Вечновидящее око
+HAG_Faltering_Will,Faltering Will,
+HAG_Insanitys_Kiss,Insanity's Kiss,
+HAG_InspirationAmulet,Auntie Ethel's Charm,
+HAG_Lost_Time,Lost Time,
+HAG_Missing_Pets,Missing Pets,
+HAG_Stillborn,Butterflies in the Stomach,
+HAG_Wilted_Dreams,Wilted Dreams,
+LOW_Elfsong_EmperorSword_LongSword,Sword of the Emperor,Меч Императора
+LOW_GuildRing,Guild Ring,Кольцо гильдии
+LOW_HouseOfGrief_HelpBook,Speak your Loss,
+LOW_JannathRing_Ring,Till Death Do Us Part,
+LOW_KerriRing_Ring,After Death Do Us Part,Когда смерть нас разлучит
+LOW_OfWindrider_Amulet,Amulet of Windrider,Амулет всадника ветра
+LOW_OrphicHammer,Orphic Hammer,Орфический молот
+LOW_OskarsBeloved_TorchOfRevocation,Torch of Revocation,Факел отмены
+LOW_RegenerationPrevention_Grenade,Hag's Bane,
+LOW_SorcerousSundries_RareTome,Caution Before the Seelie,
+MAG_Absolute_Protecter_Shield,Absolute's Protector,Защитник Абсолют
+MAG_Acid_AcidDamageOnWeaponAttack_Ring,Caustic Band,Едкое кольцо
+MAG_Acid_AcidMeleeCounter_Cloak,Fleshmelter Cloak,Плащ растворителя плоти
+MAG_Acid_NoxiousFumes_Gloves,Ichorous Gloves,Перчатки зловония
+MAG_Acrobat_Shoes,Acrobat Shoes,Обувь акробата
+MAG_Ambusher_Shortsword,Ambusher,Мастер засад
+MAG_ArcaneAbsorption_Dagger,Arcane Absorption Dagger,
+MAG_ArcaneTrickster_Ring,Band of the Mystic Scoundrel,Кольцо мистического негодяя
+MAG_Arcanist_Gloves,Spellmight Gloves,Перчатки мощи заклинаний
+MAG_BG_BlightBringer_Shortbow,Blightbringer,Несущий погибель
+MAG_BG_Darkfire_Shortbow,Darkfire Shortbow,Короткий лук темного пламени
+MAG_BG_DragonsBreath_Glaive,Drakethroat Glaive,Глефа драконьей глотки
+MAG_BG_Gargoyle_Boots,Gargoyle Boots,
+MAG_BG_Harold_HeavyCrossbow,Harold,Гарольд
+MAG_BG_Nimblefinger_Gloves,Nimblefinger Gloves,Перчатки ловких пальцев
+MAG_BG_OfAges_Flail,Flail of Ages,Цеп эпох
+MAG_BG_OfCrushing_Gloves,Gloves of Crushing,Перчатки подавления
+MAG_BG_OfDevotion_Shield,Shield of Devotion,Щит преданности
+MAG_BG_OfDexterity_Gloves,Gloves of Dexterity,Перчатки ловкости
+MAG_BG_OfEasthaven_Defender_Flail,Defender Flail,Цеп защитника
+MAG_BG_OfSpeed_LightCrossbow,Light Crossbow of Speed,
+MAG_BG_OfTheBanshee_Bow,Bow of the Banshee,Лук баньши
+MAG_BG_OfTheMasters_Legacy_Gauntlet,Legacy of the Masters,Наследие мастеров
+MAG_BG_Sarevok_OfChaos_Greatsword,Sword of Chaos,Меч хаоса
+MAG_BG_Wondrous_Gloves,Wondrous Gloves,Восхитительные перчатки
+MAG_Banites_Gloves,Servitor of the Black Hand Gloves,Перчатки служителя Черной Руки
+MAG_BarbMonk_Defensive_Cloth,The Graceful Cloth,Одеяние благородства
+MAG_BarbMonk_Leather_Circlet,Scabby Pugilist Circlet,Обруч драчуна Паршивца
+MAG_Barbarian_BoneSpike_Armor,Bonespike Garb,Наряд костяных шипов
+MAG_Barbarian_BoneSpike_Gloves,Bonespike Gloves,Перчатки костяных шипов
+MAG_Barbarian_BoneSpike_Helmet,Bonespike Helmet,Шлем костяных шипов
+MAG_Barbarian_BoneSpike_Shoes,Bonespike Boots,Сапоги костяных шипов
+MAG_Barbarian_Magic_Armor_1,Enraging Heart Garb,Одеяние ярости сердца
+MAG_Bard_HealingBardicInspiration_Hat,Cap of Curing,Духоподъемная шапка
+MAG_Bard_RefreshBardicInspirationSlot_Shoes,Boots of Brilliance,Сапоги великолепия
+MAG_Bard_TempHP_Armor,Blazer of Benevolence,Куртка великодушия
+MAG_BasicEnchanted_Quarterstaff,Melf's First Staff,Первый посох Мелфа
+MAG_Bhaalist_Armor,Bhaalist Armour,Доспех служителя Баала
+MAG_Bhaalist_Gloves,Bhaalist Gloves,Перчатки слуги Баала
+MAG_Bhaalist_Hat,Assassin of Bhaal Cowl,Капюшон ассасина Баала
+MAG_BlackTentacle_Amulet,Strange Tendril Amulet,Амулет странных завитков
+MAG_Blindside_Shortsword,Render of Mind and Body,Рассекатель разума и тела
+MAG_Bonded_Baneful_Shortsword,The Baneful,Пагубный
+MAG_Bonded_Lethal_Longsword,Blood-Bound Blade,
+MAG_Bonded_Shield,Shield of Returning,
+MAG_Bonded_Shocking_Warhammer,Charge-Bound Warhammer,Связанный с зарядом молот
+MAG_Bonded_Throwing_Battleaxe,Rebound Battleaxe,
+MAG_BonusAttack_AgainstMarked_Circlet,Circlet of Hunting,Охотничий обруч
+MAG_CKM_SerpenScale_Armor,Yuan-Ti Scale Mail,Чешуйчатый доспех Юаньти
+MAG_CQCaster_ArcaneChargeAfterDash_Boots,Boots of Arcane Bolstering,Обувь мистического подкрепления
+MAG_CQCaster_CloseRangedSpellMastery_Gloves,Daredevil Gloves,Перчатки сорвиголовы
+MAG_CQCaster_GainArcaneChargeOnDamaged_Robe,Bided Time,Время выжидания
+MAG_CQCaster_SpellDCBonusWhileThreatened_Circlet,Browbeaten Circlet,Обруч последней черты
+MAG_CQCaster_TempHPAfterCast_Cloak,Vivacious Cloak,Плащ живости
+MAG_ChargedLightning_AbilityCheckBoost_Gloves,The Sparkle Hands,Молниехваты
+MAG_ChargedLightning_Dash_Boots,The Speedy Lightfeet,Светоскоростные сапоги
+MAG_ChargedLightning_ElectricSurface_Boots,The Watersparkers,Искроступы
+MAG_ChargedLightning_Electrocute_Armor,The Jolty Vest,Жилет встряски
+MAG_ChargedLightning_EnsnaringShock_Ring,A Sparking Promise,
+MAG_ChargedLightning_LightningBlast_Amulet,The Blast Pendant,Подвеска разрядов
+MAG_ChargedLightning_Longbow,The Joltshooter,Молнестрел
+MAG_ChargedLightning_Quarterstaff,The Spellsparkler,Искрометатель
+MAG_ChargedLightning_Resistance_Ring,The Sparkswall,Искрощит
+MAG_ChargedLightning_StaticDischarge_Shield,The Real Sparky Sparkswall,Искрящий Искрощит
+MAG_ChargedLightning_Trident,The Sparky Points,Искрокол
+MAG_CharismaCaster_Robe,Potent Robe,Могучая мантия
+MAG_Cleric_Devotees_Mace,Devotee's Mace,Булава поборника
+MAG_Cold_IncreaseColdDamageOnCast_Staff,Mourning Frost,Скорбный хлад
+MAG_Colossal_Greatsword,Jorgoral's Greatsword,Двуручный меч Джоргорала
+MAG_Combat_Quarterstaff,Bigboy's Chew Toy,Игрушка Здоровяка
+MAG_Corrosive_Flail,Corrosive Flail,Едкий цеп
+MAG_Critical_CriticalExecution_Ring,Killer's Sweetheart,Любовь убийцы
+MAG_Critical_CriticalSwiftness_Boots,Briskwind Boots,
+MAG_Critical_Force_Gloves,Craterflesh Gloves,Перчатки плоти кратера
+MAG_Critical_HidingCritical_Cloak,Shade-Slayer Cloak,Плащ теневого убийцы
+MAG_DarkJusticiar_HalfPlate,Dark Justiciar Half-Plate,Полулаты темного юстициара (Редкий)
+MAG_Dawn_Morningstar,Tough Sunrises,
+MAG_DeadShot_Longbow,The Dead Shot,Меткий выстрел
+MAG_DevilsBlackmith_Boots,Unwanted Masterwork Greaves,Нежеланные мастерские поножи
+MAG_DevilsBlackmith_Gloves,Unwanted Masterwork Gauntlets,Нежеланные мастерские рукавицы
+MAG_DevilsBlackmith_ScaleMail,Unwanted Masterwork Scalemail,Нежеланный мастерский чешуйчатый доспех
+MAG_Drowelf_SpiderSnare_Longsword,Cruel Sting,Безжалостное жало
+MAG_Druid_IronWood_Club,Ironwood Club,Дубинка из железного дерева
+MAG_Druid_Ironvine_Shield,Ironvine Shield,Щит железной лозы
+MAG_Druid_Land_Magic_Leather_Armor,Armour of Landfall,Броня обвала
+MAG_Druid_Late_Hide_Armor_1,Barkskin Armour,Доспех дубовой кожи
+MAG_Druid_Late_Hide_Armor_2,Sharpened Snare Cuirass,Кираса заостренных силков
+MAG_Druid_Magic_Hide_Armor,Hedge Wanderer Armour,Доспех бродячего странника
+MAG_Druid_Moon_Magic_Leather_Armor,Armour of Moonbasking,Броня лунного света
+MAG_Druid_Spore_Magic_Leather_Armor,Armour of the Sporekeeper,Броня хранителя спор
+MAG_Druid_Wildshape_Hat,Shapeshifter Hat,Шляпа перевертыша
+MAG_Drunken_Cloth,Drunken Cloth,Пьяная ткань
+MAG_Duergar_Sword_KingsKnife,Knife of the Undermountain King,Нож Подгорного короля
+MAG_EGW_OfTheDrunkard_Amulet,Amulet of the Drunkard,Амулет пьяницы
+MAG_ElementalGish_AbsorbElements_Cloak,Cloak of Elemental Absorption,Плащ стихийного поглощения
+MAG_ElementalGish_ArcaneAcuity_Helmet,Helmet of Arcane Acuity,Шлем магической интуиции
+MAG_ElementalGish_BaneOnElementalWeaponDamage_Gloves,Gloves of Baneful Striking,Перчатки губительного удара
+MAG_ElementalGish_CantripBooster_Amulet,Necklace of Elemental Augmentation,Ожерелье стихийного усиления
+MAG_ElementalGish_ElementalInfusion_Ring,Ring of Elemental Infusion,Кольцо стихийной зарядки
+MAG_ElementalGish_MomentumOnElementalDamage_Boots,Boots of Elemental Momentum,Башмаки стихийного импульса
+MAG_EndGameCaster_Cloak,Cloak of the Weave,Плащ Плетения
+MAG_EndGameCaster_Hood,Hood of the Weave,Капюшон Плетения
+MAG_EndGameCaster_Robe,Robe of the Weave,Одеяние Плетения
+MAG_EndGame_HalfPlate,Armour of Agility,Броня ловкости
+MAG_EndGame_Metal_Boots,Boots of Persistence,Сапоги настойчивости
+MAG_EndGame_Plate_Armor,Armour of Persistence,Доспех настойчивости
+MAG_EndGame_StuddedLeather_Armor,Elegant Studded Leather,Элегантный клепаный кожаный доспех
+MAG_Enforcer_NonLethalFright_Club,Enforcer Club,
+MAG_Enforcer_RejunevatingKnock_Helmet,Enforcer Helmet,
+MAG_Evasive_Shoes,Evasive Shoes,Обувь уклонения
+MAG_Fighter_ActionSurge_AttackBonus_Gloves,Gauntlets of Surging Accuracy,Перчатки стремительной точности
+MAG_Finesse_Glaive,The Dancing Breeze,Танцующий бриз
+MAG_Finesse_Longsword,Larethian's Wrath,Озлобление Ларетиана
+MAG_Fire_AlwaysDippedInFire_Greatsword,Everburn Blade,Клинок «Вечное пламя»
+MAG_Fire_ApplyBurningOnFireDamage_Gloves,Gloves of Flint and Steel,
+MAG_Fire_ArcaneAcuityOnFireDamage_Hat,Hat of Fire Acuity,Шляпа огневого чутья
+MAG_Fire_BonusActionOnFireSpell_Circlet,Pyroquickness Hat,Шляпа огненной быстроты
+MAG_Fire_BurningOnDamaged_Cloak,Cindermoth Cloak,Плащ тлеющих мотыльков
+MAG_Fire_FireDamage_Quarterstaff,Gold Wyrmling Staff,Посох золотого змееныша
+MAG_Fire_HeatOnFireDamage_Gloves,Thermoarcanic Gloves,Термомагические перчатки
+MAG_Fire_HeatOnInflictBurning_Boots,Cinder Shoes,Пепельные башмаки
+MAG_Fire_HeatOnTakingFireDamage_Amulet,Fireheart,Сердце огня
+MAG_Fire_HeatOnWeaponDamage_Battleaxe,Thermodynamo Axe,Термодинамический топор
+MAG_Fire_IncreasePiercingDamageToBurning_HandCrossbow,Firestoker,Огнестрел
+MAG_Fire_IncreaseSlashingDamageToBurning_Handaxe,Dragon's Grasp,Прикосновение дракона
+MAG_Fire_IncreasedDamage_Ring,Ring of Fire,
+MAG_Fire_SelfImmolation_Ring,Ring of Self Immolation,Кольцо самосожжения
+MAG_FlamingFist_BattleWizardGloves,Cindersnap Gloves,Перчатки летящего пепла
+MAG_FlamingFist_Flame_Armor,Flame Enamelled Armour,Пламенный доспех
+MAG_FlamingFist_Flaming_Shield,Shield of Scorching Reprisal,Щит опаляющего ответа
+MAG_FlamingFist_ScoutRing,Shifting Corpus Ring,Переменчивое кольцо
+MAG_FlamingFist_StaffOfFire,Incandescent Staff,Пламенеющий посох
+MAG_Force_Pike,Breaching Pikestaff,Пробивающая пика
+MAG_FreeCast_Shortsword,Executioner Sword,
+MAG_Frost_GenerateFrostOnDamage_Gloves,Winter's Clutches,Зимняя хватка
+MAG_Frost_GenerateFrostOnDamage_Robe,Icebite Robe,Одеяние изморози
+MAG_Frost_GenerateFrostOnStatusApply_Hat,Coldbrim Hat,Шляпа холодных полей
+MAG_Frost_GenerateSurfaceOnColdDamage_Ring,Snowburst Ring,Кольцо снежного взрыва
+MAG_Frost_IceSurfaceProneImmunity_Boots,Hoarfrost Boots,Сапоги морозного инея
+MAG_Frost_Offhand_Dagger,Cold Snap,Холодный щелчок
+MAG_Gandrel_UndeadSlayer_HeavyCrossbow,Gandrel's Aspiration,Устремление Гандрела
+MAG_Giantslayer_Greatsword,Balduran's Giantslayer,Убийца великанов Балдурана
+MAG_Gish_ArcaneAcuity_Gloves,Gloves of Battlemage's Power,Перчатки силы боевого мага
+MAG_Gish_ArcaneSynergy_Circlet,Diadem of Arcane Synergy,Диадема мистического слияния
+MAG_Gish_ArcaneSynergy_Ring,Ring of Arcane Synergy,Кольцо мистического слияния
+MAG_Gish_PsychicDamageBonusWhileConcentrating_Ring,Strange Conduit Ring,Кольцо мистической мощи
+MAG_Gish_TempHPWhileConcentrating_Boots,Vital Conduit Boots,Сапоги жизненного продвижения
+MAG_Gish_WeaknessBranding_Amulet,Amulet of Branding,Амулет клеймления
+MAG_Githborn_MageHandSupport_Gloves,Hr'a'cknir Bracers,Наручи хр'а'книр
+MAG_Githborn_MagicEating_HalfPlate,Psionic Ward Armour,Доспех псионической защиты
+MAG_Githborn_Mindcrusher_Greatsword,Soulbreaker Greatsword,Двуручный меч Душерез
+MAG_Githborn_PsionicMovement_Boots,Boots of Psionic Movement,Сапоги псионического движения
+MAG_Githborn_TelekineticBolt_HeavyCrossbow,Crossbow of Arcane Force,Арбалет мистической мощи
+MAG_GleamingSorcery_Hat,Birthright,Право рождения
+MAG_Gortash_Boots,Tyrannical Jackboots,Тиранические сапоги
+MAG_Gortash_Cloth,Cloth of Authority,Одежда правителя
+MAG_Gortash_Gloves,Gauntlet of the Tyrant,Перчатки тирана
+MAG_Gortash_HeavyCrossbow,Fabricated Arbalest,Фабричный арбалет
+MAG_GreaterNecromancy_Staff,Staff of Cherished Necromancy,Посох изнеженной некромантии
+MAG_GreaterSilver_Greatsword,Silver Sword of the Astral Plane,Серебряный меч с астрального плана
+MAG_Greenstone_Amulet,Fey Semblance Amulet,Амулет подражания феям
+MAG_HAV_ThornBlade_Scimitar,Thorn Blade,Терновый клинок
+MAG_Harpers_ArmorOfShadows,Shadeclinger Armour,Доспех теневой защиты
+MAG_Harpers_HarpersAmulet,Amulet of the Harpers,Амулет арфистов
+MAG_Harpers_JhannylGloves,Jhannyl's Gloves,Перчатки Джанниль
+MAG_Harpers_OfWeapons_Quarterstaff,Harper Sacredstriker,Священный посох арфиста
+MAG_Harpers_RingOfAttraction,Ring of Geniality,Кольцо привлекательности
+MAG_Harpers_RingOfProjection,Ring of Flinging,Кольцо метания
+MAG_Harpers_RingOfTwilight,Ring of Twilight,Кольцо Сумерек
+MAG_Harpers_ShieldsOfShadows,Gloomstrand Shield,Щит Пряди Мрака
+MAG_Hat_Barbarian_Hide,Horns of the Berserker,Рога берсеркера
+MAG_Hat_Butler,Gibus of the Worshipful Servant,Шляпа дворецкого
+MAG_Hat_Circushat,Hat Of Uproarious Laughter,
+MAG_Healer_HPRestoration_Amulet,Amulet of Restoration,Амулет восстановления
+MAG_Healer_HealSelfPoisonWeapon_Amulet,Broodmother's Revenge,Месть матери выводка
+MAG_Healer_HealSelf_Helmet,Wapira's Crown,Венец Вапиры
+MAG_Healer_TempHPOnHeal_Boots,Boots of Aid and Comfort,Ботинки поддержки и подмоги
+MAG_Heat_Fire_Robe,Obsidian Laced Robe,Одеяние с обсидиановой отделкой
+MAG_Helmet_Human_Watcher,Steel Watcher Helmet,
+MAG_HigherNecromancy_Staff,Hollow's Staff,Посох Холлоу
+MAG_Hunting_Shortbow,Hunting Shortbow,Охотничий короткий лук
+MAG_Illithid_Carapace_Armor,Cerebral Citadel Armour,Доспех церебральной цитадели
+MAG_Illithid_Carapace_Gloves,Cerebral Citadel Gloves,Перчатки церебральной цитадели
+MAG_Illithid_CharmPerson_Ring,Ring of Beguiling,
+MAG_Illithid_MindOverload_Weapon_Longsword,Blade of Oppressed Souls,Клинок угнетенных душ
+MAG_Illithid_Regen_Circlet,Circlet of Mental Anguish,Обруч душевных терзаний
+MAG_Infernal_Hellbeard_Halberd,Hellbeard Halberd,Алебарда адской бороды
+MAG_Infernal_Longsword,Infernal Longsword,
+MAG_Infernal_Mace,Infernal Mace,Дьявольская булава
+MAG_Infernal_Metal_Boots,Helldusk Boots,Сапоги адского заката
+MAG_Infernal_Metal_Gloves,Helldusk Gloves,Перчатки адского заката
+MAG_Infernal_Metal_Helmet,Helldusk Helmet,Шлем адского заката
+MAG_Infernal_Plate_Armor,Helldusk Armour,Доспехи адского заката
+MAG_Infernal_Warhammer,Infernal Warhammer,
+MAG_Invisible_Pike,Unseen Menace,Незримая угроза
+MAG_Jumping_Shoes,Swiresy Shoes,Башмаки а-ля Свайрс
+MAG_JusticiarArmor_Gloves,Dark Justiciar Gauntlets,Рукавицы темного юстициара (необычные)
+MAG_Justiciar_Scimitar,Justiciar's Scimitar,Скимитар юстициара
+MAG_Justiciar_Shield,Justiciar's Greatshield,Большой щит юстициара
+MAG_Ketheric_Shield,Ketheric's Shield,Щит Кетерика
+MAG_Ketheric_Warhammer,Ketheric's Warhammer,Боевой молот Кетерика
+MAG_Kuotoa_Lightning_Spear,Lightning Jabber,Молниеносный таратор
+MAG_LC_BurnOnDamage_Scimitar,Kurwin's Cauteriser,Прижигатель Карвина
+MAG_LC_CazadorVampiric_Quarterstaff,Woe,Несчастье
+MAG_LC_ChainDevil_Flail,Planeslayer Flail,
+MAG_LC_Counterspell_Quarterstaff,Staff of Interruption,Посох прерывания
+MAG_LC_DrowSpider_Gloves,Pale Widow Gloves,
+MAG_LC_Frigid_Trident,Allandra's Whelm,
+MAG_LC_HellishMadness_Amulet,Kruznabir's Asylum Amulet,
+MAG_LC_Jannath_Hat,Jannath's Hat,Шляпа Джанната
+MAG_LC_Lorroakan_Quarterstaff,Despair of Athkatla,Отчаяние Аткатлы
+MAG_LC_Lorroakan_Robe,Shelter of Athkatla,Приют Аткатлы
+MAG_LC_Nymph_Cloak,Nymph Cloak,Плащ нимфы (Baldur's Gate III)
+MAG_LC_OfTheFist_MorningStar,Ravengard's Scourger,Бич Рейвенгарда
+MAG_LC_OfTheRam_Quarterstaff,Staff of the Ram,Посох овна
+MAG_LC_PirateCommander_Scimitar,Salty Scimitar(rrr),Соленый скимитар(р-р-р)
+MAG_LC_RadiantLight_Rapier,Pelorsun Blade,Клинок Солнца Пелора
+MAG_LC_TheAmplifier_Amulet,Spell Savant Amulet,Амулет гения чар
+MAG_LC_Tinkerer_Gloves,Winkling Gloves,Достающие перчатки
+MAG_LC_Umberlee_Cold_Sickle,Wavemother's Sickle,Серп Матери Волн
+MAG_LC_Umberlee_Protection_Cape,Wavemother's Cloak,Плащ Матери Волн
+MAG_LC_Umberlee_Regeneration_Boots,Wavemother's Boots,
+MAG_LC_Umberlee_Regeneration_Robe,Wavemother's Robe,Мантия Матери Волн
+MAG_LC_UndeadSlayer_Crossbow,The Long Arm of the Gur,Длинная рука гурцев
+MAG_LC_Wave_Trident,Trident of the Waves,Трезубец волн
+MAG_LOW_Rat_Keepsake_Ring,Keepsake Ring,Кольцо на память
+MAG_LegendaryEvasion_Amulet,Unflinching Protector Amulet,Амулет непоколебимого защитника
+MAG_Lesser_Infernal_Metal_Gloves,Flawed Helldusk Gloves,Дефектные перчатки адского заката
+MAG_Lesser_Infernal_Metal_Helmet,Flawed Helldusk Helmet,Дефектный шлем адского заката
+MAG_Lesser_Infernal_Plate_Armor,Flawed Helldusk Armour,Дефектный доспех адского заката
+MAG_LowHP_BonusAction_Helmet,Helmet of Grit,Шлем твердости
+MAG_LowHP_CounterOnDamage_ChainShirt,Robust Chain Shirt,
+MAG_LowHP_IgnoreAttackOfOpportunity_Amulet,Moondrop Pendant,Лунная подвеска
+MAG_LowHP_IncreaseDamagePsychic_GithGreatsword,Githyanki Greatsword,
+MAG_LowHP_IncreaseDamage_Greataxe,Blooded Greataxe,Окровавленный двуручный топор
+MAG_LowHP_ResistanceFire_Gloves,Gloves of Fire Resistance,
+MAG_LuckySeven_Amulet,Corvid Token,Жетон ворона
+MAG_MM_Sorcery_SeekingSpell_Gloves,Spellseeking Gloves,Перчатки зачарованного поиска
+MAG_Martial_Exertion_Gloves,Martial Exertion Gloves,Перчатки армейской муштры
+MAG_MeleeDebuff_AttackDebuff12versatile_OnDamage_Longsword,Adamantine Longsword,Адамантиновый длинный меч
+MAG_MeleeDebuff_AttackDebuff1_OnDamage_Helmet,Grymskull Helm,Шлем-череп Грима
+MAG_MeleeDebuff_AttackDebuff1_OnDamage_Mace,Adamantine Mace,Адамантиновая булава
+MAG_MeleeDebuff_AttackDebuff1_OnDamage_ScaleMail,Adamantine Scale Mail,Адамантиновый чешуйчатый доспех
+MAG_MeleeDebuff_AttackDebuff1_OnDamage_Shield,Adamantine Shield,Адамантиновый щит
+MAG_MeleeDebuff_AttackDebuff2_OnDamage_HeavyCrossbow,Giantbreaker,Истребитель великанов
+MAG_MeleeDebuff_AttackDebuff2_OnDamage_SplintMail,Adamantine Splint Armour,Адамантиновый пластинчатый доспех
+MAG_MissileProtection_Shield,Abdel's Trusted Shield,Надежный щит Абделя
+MAG_Mobility_ExplosionOnJump_Maul,Hamarhraft,Хамархрафт
+MAG_Mobility_JumpOnDash_Gloves,Fleetfingers,Перчатки щипача
+MAG_Mobility_LowHP_Momentum_Ring,Spurred Band,Кольцо самосохранения
+MAG_Mobility_MomentumOnAttack_Scimitar,Speedy Reply,Скорый ответ
+MAG_Mobility_MomentumOnCombatStart_Helmet,Haste Helm,Шлем спешки
+MAG_Mobility_MomentumOnDash_Boots,Springstep Boots,Ботинки бодрой ходьбы
+MAG_Monk_Cold_Gloves,Snow-Dusted Monastery Gloves,Заснеженные монастырские перчатки
+MAG_Monk_Fire_Gloves,Gloves of Cinder and Sizzle,Перчатки золы и шипения
+MAG_Monk_Magic_Armor,Armour of Uninhibited Kushigo,Доспех неукротимого Кусиго
+MAG_Monk_Magic_Armor_1,Garb of the Land and Sky,Одеяние земли и неба
+MAG_Monk_Magic_Boots,Boots of Uninhibited Kushigo,Сапоги неукротимого Кусиго
+MAG_Monk_Magic_Gloves,Gloves of Uninhibited Kushigo,Перчатки неукротимого Кусиго
+MAG_Monk_Magic_Hat,Hat of Uninhibited Kushigo,Шляпа неукротимого Кусиго
+MAG_Monk_SoulPerception_Hat,Mask of Soul Perception,Маска восприятия души
+MAG_Monk_SoulRejunevation_Armor,Vest of Soul Rejuvenation,Одеяние омоложения души
+MAG_Monk_Thunder_Gloves,Thunderpalm Strikers,Громобои
+MAG_MonsterSlayer_Glaive,Monster Slayer Glaive,Глефа убийцы чудовищ
+MAG_Moonlight_Glaive,Moonlight Glaive,Лунная глефа
+MAG_Murderous_Dagger,Murderous Cut,Убийственный порез
+MAG_Myrkulites_CircletOfMyrkul_Circlet,Circle of Bones,Обруч костей
+MAG_Myrkulites_RingofMyrkul_Ring,Ring of Exalted Marrow,Кольцо восхитительного костного мозга
+MAG_OB_Paladin_DeathKnight_Armor,Blackguard's Plate,Латы темного паладина
+MAG_OB_Paladin_DeathKnight_Boots,Blackguard's Greaves,Поножи темного паладина
+MAG_OB_Paladin_DeathKnight_Gloves,Blackguard's Gauntlets,Рукавицы темного паладина
+MAG_OB_Paladin_DeathKnight_Longsword,Blackguard's Sword,Меч темного паладина
+MAG_OB_Paladin_DeathKnight_Shield,Shield of the Undevout,Щит непреданного
+MAG_Oathbreaker_Boots,Oathbreaker Knight Boots,Обувь рыцаря-клятвопреступника
+MAG_OfArcanicAssault_Robe,Robe of Exquisite Focus,Одеяние дивного сосредоточения
+MAG_OfArcanicDefense_Robe,Robe of Supreme Defences,Одеяние высшей защиты
+MAG_OfAutomaton_Gloves,Gloves of the Automaton,Перчатки аутоматона
+MAG_OfAwareness_Bow,Bow of Awareness,Лук осознанности
+MAG_OfBlink_Ring,Ring of Blink,Кольцо мерцания
+MAG_OfFeywildSparks_Ring,Ring of Feywild Sparks,Кольцо фейских искр
+MAG_OfRevivify_Gloves,The Reviving Hands,Оживляющие руки
+MAG_OfRupture_Rapier,Rupturing Blade,Рассекающий клинок
+MAG_OfSharpCaster_Hat,Hat of the Sharp Caster,Шляпа ловкого заклинателя
+MAG_OfShielding_Shield,Shield of Shielding,Защитный щит
+MAG_OfSpellPower_Quarterstaff,Staff of Spellpower,Посох силы заклинаний
+MAG_OfSpellResistance_Robe,Robe of Spell Resistance,
+MAG_OfSwordmaster_Gloves,Swordmaster Gloves,Перчатки мастера меча
+MAG_OfTheBalancedHands_Gloves,Gloves of the Balanced Hands,Перчатки сбалансированных рук
+MAG_OfTheDevout_Amulet,Amulet of the Devout,Амулет Кликуши
+MAG_OfTheDuelist_Gloves,Gloves of The Duellist,Перчатки дуэлянта
+MAG_OfUndeadServant_Ring,Crypt Lord Ring,Кольцо владыки подземелья
+MAG_OfWarMaster_Gloves,Gauntlets of the Warmaster,Перчатки военачальника
+MAG_OpenHand_Radiant_Gloves,Seraphic Pugilist Gloves,Серафические боксерские перчатки
+MAG_Orin_Cloth,Mutilated Carapace,Изувеченный панцирь
+MAG_Orpheus_Ring,Orphic Ring,Орфическое кольцо
+MAG_Orthon_Hellfire_HandCrossbow,Hellfire Hand Crossbow,Одноручный арбалет адского пламени
+MAG_PHB_CloakOfDisplacement_Cloak,Cloak of Displacement,Плащ ускользания
+MAG_PHB_CloakOfProtection_Cloak,Cloak of Protection,Защитная накидка
+MAG_PHB_Defender_Greataxe,Defender Greataxe,Двуручный топор защитника
+MAG_PHB_DwarvenThrower_Warhammer,Dwarven Thrower,Гномий метатель
+MAG_PHB_ElvenChain_Armor,Elven Chain,Эльфийская кольчуга
+MAG_PHB_OfEvasion_Ring,Ring of Evasion,Кольцо изворотливости
+MAG_PHB_OfFreeAction_Ring,Ring of Free Action,Кольцо бесплатного действия
+MAG_PHB_OfJumping_Ring,Ring of Jumping,Кольцо прыжка
+MAG_PHB_OfLifestealing_Shortsword,Sword of Life Stealing,Меч вытягивания жизни
+MAG_PHB_OfRegeneration_Ring,Ring of Regeneration,
+MAG_PHB_OfSoulCatching_Gloves,Gloves of Soul Catching,Перчатки душелова
+MAG_PHB_OfSpeed_Scimitar,Belm,Бельм
+MAG_PHB_OfThievery_Gloves,Gloves of Thievery,Перчатки воровства
+MAG_PHB_PactKeeper_Quarterstaff,Caitiff Staff,Посох изгоя
+MAG_PHB_PeriaptofWoundClosure_Amulet,Periapt of Wound Closure,Оберег заживления ран
+MAG_PHB_Ring_Of_Protection,Ring of Protection,Кольцо защиты
+MAG_PHB_ofPower_Pearl_Amulet,Pearl of Power Amulet,Амулет жемчужины силы
+MAG_Paladin_LayOnHandsSupport_Gloves,Gloves of Heroism,Перчатки героизма
+MAG_Paladin_MomentumOnConcentration_Boots,Boots of Striding,Сапоги «Гигантский шаг»
+MAG_Paladin_RestoreChannelDivinity_Armor,Armour of Devotion,Броня благоговения
+MAG_Paladin_SmiteSpellsSupport_Helmet,Helmet of Smiting,Шлем избиения
+MAG_ParalyzingRay_Ring,Burnished Ring,Начищенное кольцо
+MAG_PassWithoutTrace_Ring,Ring of Shadows,Кольцо теней
+MAG_PoR_OfVigilance_Halberd,Halberd of Vigilance,Алебарда бдительности
+MAG_Poison_Greatclub,Argument Solver,Решатель споров
+MAG_Poison_InflictPoisonHealSelf_Cloak,Derivation Cloak,Плащ извлечения
+MAG_Poison_PoisonExposure_Gloves,Poisoner's Gloves,Перчатки отравителя
+MAG_Poison_PoisonLethality_Ring,Poisoner's Ring,Кольцо отравителя
+MAG_Primeval_Silver_Longsword,Voss' Silver Sword,Серебряный меч Восса
+MAG_Projectile_Shoes,Slinging Shoes,Башмаки пращника
+MAG_Psychic_MentalFatigue_Cape,Braindrain Cape,
+MAG_Psychic_MentalFatigue_Gloves,Braindrain Gloves,Перчатки опустошения разума
+MAG_Psychic_MentalOverload_Ring,Ring of Mental Inhibition,Кольцо подавления разума
+MAG_Psychic_MentalSundering_Dagger,Mind Sundering Dagger,
+MAG_RadiantLight_Morningstar,The Sacred Star,Священная звезда
+MAG_Radiant_DamageBonusOnIlluminatedTarget_Ring,Callous Glow Ring,Кольцо безжалостного света
+MAG_Radiant_RadiatingOrb_Armor,Luminous Armour,Светящийся доспех
+MAG_Radiant_RadiatingOrb_Gloves,Luminous Gloves,Светящиеся перчатки
+MAG_Radiant_RadiatingOrb_Ring,Coruscation Ring,Сверкающее кольцо
+MAG_Radiant_Radiating_Hammer,Shining Staver-of-Skulls,Сверкающий крушитель черепов
+MAG_Radiant_Radiating_Helmet,Holy Lance Helm,Шлем священного сияния
+MAG_Rage_TempHPOnExit_Gloves,Reason's Grasp,Рука мира
+MAG_Raven_Gloves,Raven Gloves,Перчатки ворона
+MAG_Restoration_SpellSlotRestoration_Amulet,Spellcrux Amulet,Амулет сути чар
+MAG_RiskyAttack_Ring,Risky Ring,Рисковое кольцо
+MAG_SHA_SeluneBlessing_Spear,Selûne's Spear of Night,Копье ночи Селунэ
+MAG_SHA_SharBlessing_Spear,Shar's Spear of Evening,Копье вечера Шар
+MAG_Safeguard_Shield,Safeguard Shield,Щит надежной защиты
+MAG_SecondChance_Amulet,Chancer's Carcanet,Колье пройдохи
+MAG_Selunite_Isobel_Robe,Moon Devotion Robe,Мантия преданности луне
+MAG_Shadow_BlindImmunity_Ring,Eversight Ring,Кольцо вечного зрения
+MAG_Shadow_Blinding_Bow,Least Expected,Полная неожиданность
+MAG_Shadow_FogCloud_Amulet,Hammergrim Mist Amulet,Туманный амулет Хаммергрима
+MAG_Shadow_ShadowBlade_Ring,Shadow Blade Ring,Кольцо клинка теней
+MAG_Shadow_Shadowstep_Boots,Shadowstep Boots,
+MAG_Shadow_Shortsword,Sword of Clutching Umbra,Меч цепкого мрака
+MAG_Shadow_SpellDCBonusWhileObscured_Circlet,The Shadespell Circlet,Обруч теневых чар
+MAG_Shadow_StealthBonusWhileObscured_Armor,Penumbral Armour,Сумеречная броня
+MAG_ShapeshiftersBurgeon_Ring,Shapeshifter's Boon Ring,Кольцо щедрости оборотня
+MAG_Shove_ACboost_Ring,Bracing Band,Кольцо усилия
+MAG_Slicing_Shortsword,Slicing Shortsword,Режущий короткий меч
+MAG_Spellbreaker_Battleaxe,Witchbreaker,Ведьмобой
+MAG_Stalker_Gloves,Stalker Gloves,Перчатки следопыта
+MAG_Steadfast_Shield,Swires' Sledboard,Доска Свайрса
+MAG_StrongString_Longbow,Titanstring Bow,Лук с титановой тетивой
+MAG_TWN_Brewery_Greatclub,Punch-Drunk Bastard,Упившийся подонок
+MAG_TWN_Surgeon_ParalyzingCritical_Amulet,Surgeon's Subjugation Amulet,Амулет хирургического покорения
+MAG_TWN_Taxblade_Morningstar,Twist of Fortune,Богатство и удача
+MAG_Taras_Collar_Amulet,Tressym Collar,Ошейник трессума
+MAG_TerrainWalkers_Boots,Boots of Genial Striding,Сапоги немыслимого шага
+MAG_TheBulwark_Shield,Viconia's Walking Fortress,Ходячая крепость Виконии
+MAG_TheChromatic_Staff,Markoheshkir,Маркохешкир
+MAG_TheCrimson_Shortsword,Crimson Mischief,Алый переполох
+MAG_TheDestroyer_Maul,Foebreaker,Враголом
+MAG_TheDueller_Rapier,Duellist's Prerogative,Прерогатива дуэлянта
+MAG_TheHunters_Dagger,Hunter's Dagger,Кинжал охотника
+MAG_TheImpaler_Pike,The Impaler,
+MAG_TheOptimist_Ring,Seemingly Gleaming Ring,Сверкающее на вид кольцо
+MAG_TheThorns_Trident,Nyrulna,Нирулна
+MAG_TheVictory_Longbow,Gontr Mael,Гонтр Маэль
+MAG_TheWoundSeeker_Greatsword,Svartlebee's Woundseeker,Ранитель Свартлеби
+MAG_Throwable_Pike,Returning Pike,Возвратная пика
+MAG_Thunder_ArcaneAcuityOnThunderDamage_Hat,Hat of Storm Scion's Power,Шляпа мощи потомка бури
+MAG_Thunder_InflictDazeOnThunderDamage_Ring,Ring of Spiteful Thunder,Кольцо недовольного грома
+MAG_Thunder_ReverberationOnRangeSpellDamage_Amulet,Spineshudder Amulet,Амулет позвоночной дрожи
+MAG_Thunder_ReverberationOnStatusApply_Boots,Boots of Stormy Clamour,Сапоги буревых раскатов
+MAG_Thunder_Reverberation_Gloves,Gloves of Belligerent Skies,Перчатки воинственных небес
+MAG_Thunder_ThunderClap_Quarterstaff,Cacophony,Какофония
+MAG_Toll_Collector_Cloak,Cloak of Avarice,
+MAG_Tyrrant_Warhammer,Hammer of the Just,Молот праведника
+MAG_Vampiric_Gloves,Vampiric Gloves,
+MAG_Vicious_Battleaxe,Vicious Battleaxe,Беспощадный боевой топор
+MAG_Vicious_Dagger,Dolor Amarus,Горечь Долора
+MAG_Vicious_Shortbow,Vicious Shortbow,Жестокий короткий лук
+MAG_Viconia_Mace,Handmaiden's Mace,Булава служанки
+MAG_Viconia_Robe,Viconia's Priestess Robe,Одеяние Виконии
+MAG_Violence_LowHP_Violence_Clothes,Bloodguzzler Garb,Одежда кровопийцы
+MAG_Violence_ViolenceOnDamaged_Helmet,Cap of Wrath,Шлем гнева
+MAG_Violence_ViolenceOnDash_Boots,Linebreaker Boots,Таранные сапоги
+MAG_WATCHER_Human_Crossbow,Hellfire Engine Crossbow,Адский самовзводный арбалет
+MAG_WATCHER_Human_Greataxe,Hellfire Greataxe,Двуручный топор адского пламени
+MAG_WYRM_Commander_Longsword,Duke Ravengard's Longsword,Длинный меч герцога Рейвенгарда
+MAG_WYRM_Farlin_Dagger,Gleamdance Dagger,Кинжал мерцающего танца
+MAG_WYRM_OfBalduran_Helmet,Helm of Balduran,Шлем Балдурана
+MAG_WYRM_OfTruthTelling_Ring,Ring of Truthfulness,Кольцо правдивости
+MAG_WYRM_UndeadBane_GreatAxe,The Undead Bane,Гроза нежити
+MAG_WYRM_UndeadProtector_Robe,Veil of the Morning,Утренний покров
+MAG_WYR_Hellrider_Longbow,Hellrider Longbow,Длинный лук адского всадника
+MAG_WYR_Orin_Bhaalist_Dagger,Bloodthirst,
+MAG_Warlock_Quickened_Gloves,Quickspell Gloves,Перчатки быстрых чар
+MAG_Warlock_Twinned_Gloves,Gemini Gloves,Перчатки-близнецы
+MAG_Wizard_Pointy_Hat,The Pointy Hat,Остроконечная шляпа
+MAG_WoodWoad_Nature_Shield,Wood Woad Shield,Щит из дерева вайды
+MAG_ZOC_AdvantageOnMeleeAttackWhileSurounded_Gloves,Gloves of the Growling Underdog,Перчатки рычащего пса
+MAG_ZOC_ForceConduitWhileSurounded_Boots,Tenacious Boots,
+MAG_ZOC_ForceConduit_ChainMail,Rippling Force Mail,Кольчуга сминающей силы
+MAG_ZOC_ForceConduit_Halberd,The Skinburster,Пронзатель кожи
+MAG_ZOC_Force_Helmet,Tightening Orbit Helm,
+MAG_ZOC_RampartAura_Amulet,Treacleflow Amulet,
+MAG_Zhentarim_Demonspirit_Gloves,Abyss Beckoners,Манящие в бездну
+MAG_Zhentarim_Lockpicking_Gloves,Knock Knuckle Gloves,Перчатки настойчивого стука
+MAG_Zhentarim_SleeperDagger,Dread Iron Dagger,Кинжал железного страха
+MAG_Zhentarim_Swap_Gloves,Dark Displacement Gloves,Перчатки темного ускользания
+MAG_ofGreaterHealth_Amulet,Amulet of Greater Health,Амулет великого здоровья
+MAG_ofMarksmanship_Hat,Marksmanship Hat,Шляпа меткого стрелка
+MOO_Ketheric_Armor,Reaper's Embrace,Объятья Жнеца
+MOO_WulbrenHammer,Wulbren's Hammer,Молот Вульбрена
+OBJ_AcidBottle,Acid Vial,
+OBJ_Antitoxin,Antidote,
+OBJ_ArrowOfAberrationSlaying,Arrow of Aberration Slaying,
+OBJ_ArrowOfAcid,Arrow of Acid,
+OBJ_ArrowOfAntimagic,Arrow of Arcane Interference,
+OBJ_ArrowOfBeastSlaying,Arrow of Beast Slaying,
+OBJ_ArrowOfCelestialSlaying,Arrow of Celestial Slaying,
+OBJ_ArrowOfConstructSlaying,Arrow of Construct Slaying,
+OBJ_ArrowOfDarkness,Arrow of Darkness,
+OBJ_ArrowOfDetonation,Arrow of Roaring Thunder,
+OBJ_ArrowOfDispelling,Arrow of Salving,
+OBJ_ArrowOfDragonSlaying,Arrow of Dragon Slaying,
+OBJ_ArrowOfElementalSlaying,Arrow of Elemental Slaying,
+OBJ_ArrowOfFeySlaying,Arrow of Fey Slaying,
+OBJ_ArrowOfFiendSlaying,Arrow of Fiend Slaying,
+OBJ_ArrowOfFire,Arrow of Fire,
+OBJ_ArrowOfGiantSlaying,Arrow of Giant Slaying,
+OBJ_ArrowOfHumanoidSlaying,Arrow of Humanoid Slaying,
+OBJ_ArrowOfIce,Arrow of Ice,
+OBJ_ArrowOfLightning,Arrow of Lightning,
+OBJ_ArrowOfMonstrositySlaying,Arrow of Monstrosity Slaying,
+OBJ_ArrowOfOozeSlaying,Arrow of Ooze Slaying,
+OBJ_ArrowOfPiercing,Arrow of Piercing,
+OBJ_ArrowOfPlantSlaying,Arrow of Plant Slaying,
+OBJ_ArrowOfRicochet,Arrow of Many Targets,
+OBJ_ArrowOfSmokepowder,Smokepowder Arrow,
+OBJ_ArrowOfTeleportation,Arrow of Transposition,
+OBJ_ArrowOfUndeadSlaying,Arrow of Undead Slaying,
+OBJ_ArrowOfWraithsEmbrace,Arrow of Ilmater,
+OBJ_AssassinsBlood,Assassin's Blood,
+OBJ_AutomatonPart,Broken Machinery,
+OBJ_Bag_BlackPowder,Smokepowder Satchel,
+OBJ_BarbedArrow,Barbed Arrow,
+OBJ_Barrel,Zhentarim Shipping Crate,
+OBJ_Barrel_Filled_Alcohol,Firewine Barrel,
+OBJ_Barrel_Filled_Oil,Oil Barrel,
+OBJ_Barrel_Filled_Smokepowder,Smokepowder Barrel,
+OBJ_BasicPoison,Basic Poison,
+OBJ_BloodPotion_Astarion,Potion of Everlasting Vigour,
+OBJ_BloodPotion_Dragonborn_Acid,Elixir of Dragonborn Prowess: Acid,
+OBJ_BloodPotion_Dragonborn_Fire,Elixir of Dragonborn Prowess: Fire,
+OBJ_BloodPotion_Dragonborn_Ice,Elixir of Dragonborn Prowess: Frost,
+OBJ_BloodPotion_Dragonborn_Lightning,Elixir of Dragonborn Prowess: Lightning,
+OBJ_BloodPotion_Dragonborn_Poison,Elixir of Dragonborn Prowess: Poison,
+OBJ_BloodPotion_Dwarf,Elixir of Dwarven Resilience,
+OBJ_BloodPotion_Elf,Elixir of Elven Elegance,
+OBJ_BloodPotion_Githyanki,Elixir of Githyanki Providence,
+OBJ_BloodPotion_Gnome,Elixir of Gnomish Ingenuity,
+OBJ_BloodPotion_HalfElf,Elixir of Half-Elven Healing,
+OBJ_BloodPotion_HalfOrc,Elixir of Half-Orcish Fury,
+OBJ_BloodPotion_Halfing,Elixir of Halfling Luck,
+OBJ_BloodPotion_Human,Elixir of Human Versatility,
+OBJ_BloodPotion_Tiefling,Elixir of Tiefling Vice,
+OBJ_Bomb,Smokepowder Bomb,
+OBJ_Bomb_Orthon,Orthon Explosive,
+OBJ_Bomb_Sunflash,Flashblinder,
+OBJ_Book,Dead Druid's Journal,
+OBJ_Bottle_Destructible,Bottle,
+OBJ_Bowl,Bowl,
+OBJ_Camp_Pack,Supply Pack,
+OBJ_Camp_Pack_Greater,Heavy Supply Pack,
+OBJ_Candle,Candle,
+OBJ_Chest_Wood_Small,Traveller's Chest (small),
+OBJ_CrawlerMucus,Crawler Mucus,
+OBJ_CrownController_Ketheric,Gortash's Netherstone,
+OBJ_DrowPoison,Drow Poison,
+OBJ_Dye_Azure,Cobalt Dye,
+OBJ_Dye_BlackBlue,Black and Azure Dye,
+OBJ_Dye_BlackGreen,Black and Summer Green Dye,
+OBJ_Dye_BlackPink,Jet and Pink Rose Dye,
+OBJ_Dye_BlackRed,Black and Furnace Red Dye,
+OBJ_Dye_BlackTeal,Black and Jade Green Dye,
+OBJ_Dye_Blue,Light Blue Dye,
+OBJ_Dye_BlueGreen,Sea Green Dye,
+OBJ_Dye_BluePurple,Lavender Dye,
+OBJ_Dye_BlueYellow,Blue Dye,
+OBJ_Dye_BlueYellow_02,Baby Blue and Gold Dye,
+OBJ_Dye_Golden,Yellow Dye,
+OBJ_Dye_Green,Green Dye,
+OBJ_Dye_GreenPink,Pink and Leaf Green Dye,
+OBJ_Dye_GreenSage,Swamp Green Dye,
+OBJ_Dye_GreenSwamp,Sage Green Dye,
+OBJ_Dye_Green_02,Faewild Green and Dun Dye,
+OBJ_Dye_IceCream,Custard and Pink Rose Dye,
+OBJ_Dye_IceCream_02,Peach and Apricot Dye,
+OBJ_Dye_IceCream_03,Mellow Fruit Dye,
+OBJ_Dye_IceCream_04,"Lime, Lemon, and Lichen Dye",
+OBJ_Dye_Maroon,Gorgeous Maroon Dye,
+OBJ_Dye_Ocean,Ocean Dye,
+OBJ_Dye_Orange,Orange Dye,
+OBJ_Dye_OrangeBlue,Pale Orange Dye,
+OBJ_Dye_Pink,Pale Pink Dye,
+OBJ_Dye_Purple,Dark Amethyst Dye,
+OBJ_Dye_PurpleRed,Bloody Plum Dye,
+OBJ_Dye_Purple_02,Purple Dye,
+OBJ_Dye_Purple_03,Indigo Dye,
+OBJ_Dye_Purple_04,Deep Lilac Dye,
+OBJ_Dye_Red,Red Dye,
+OBJ_Dye_RedBrown,Muddy Red Dye,
+OBJ_Dye_RedWhite,White and Scarlet Dye,
+OBJ_Dye_Remover,Dye Remover,
+OBJ_Dye_RichRed,Lush Burgundy,
+OBJ_Dye_RoyalBlue,Boreal Blue Dye,
+OBJ_Dye_Teal,Pale Green Dye,
+OBJ_Dye_WhiteBlack,Harlequin Black and White Dye,
+OBJ_Dye_WhiteBrown,Brown Alabaster Dye,
+OBJ_Dye_WhiteRed,Sinful Red on Bone White,
+OBJ_FireBottle,Alchemist's Fire,
+OBJ_Fireworks_Rocket_A,Popdrakes,
+OBJ_Fireworks_Rocket_B,Squidjins,
+OBJ_Fireworks_Rocket_C,Wogglims,
+OBJ_FreezingSphere,Otiluke's Conveniently Portable Freezing Sphere,
+OBJ_GenericLootItem,Astral-Touched Tadpole,
+OBJ_Generic_Light,Mortar and Pestle,
+OBJ_GreaseBottle,Grease Bottle,
+OBJ_HolyWaterFlask,Holy Water,
+OBJ_Indestructible_Light,Contract: Mol,
+OBJ_InfernalPlate,Infernal Alloy,
+OBJ_InfernalPlate_B,Enriched Infernal Iron,
+OBJ_InfernalPlate_C,Infernal Metal,
+OBJ_Kit_ThievesTools,Thieves' Tools,
+OBJ_KitchenwareRich_Ceramic_Bowl_A,Bowl,
+OBJ_Malice,Malice,
+OBJ_MindflayerBulb_Caustic,Caustic Bulb,
+OBJ_MindflayerBulb_Spiked,Spiked Bulb,
+OBJ_MindflayerBulb_Vacuum,Void Bulb,
+OBJ_MusicBox,Music Box,
+OBJ_Music_Horn,Lump's War Horn,
+OBJ_Myconid_Flesh,Lump of Myconid Flesh,
+OBJ_OilBottle,Oil Flask,
+OBJ_Oil_Of_Sharpness,Oil of Sharpness,
+OBJ_Oil_Of_Slipperiness,Oil of Slipperiness,
+OBJ_Oil_Of_The_Basilisk,Basilisk Oil,
+OBJ_Onyx,Emerald,
+OBJ_Peridot,Peridot,
+OBJ_Potion_Elixir_Of_Health,Elixir of Health,
+OBJ_Potion_Gaseous_Form,Potion of Gaseous Form,
+OBJ_Potion_Healing,Potion of Healing,
+OBJ_Potion_Healing_Greater,Potion of Greater Healing,
+OBJ_Potion_Healing_Superior,Potion of Superior Healing,
+OBJ_Potion_Healing_Supreme,Potion of Supreme Healing,
+OBJ_Potion_Of_Acid_Resistance,Elixir of Acid Resistance,
+OBJ_Potion_Of_Animal_Speaking,Potion of Animal Speaking,
+OBJ_Potion_Of_Cloud_Giant_Strength,Elixir of Cloud Giant Strength,
+OBJ_Potion_Of_Cold_Resistance,Elixir of Cold Resistance,
+OBJ_Potion_Of_Fire_Resistance,Elixir of Fire Resistance,
+OBJ_Potion_Of_Force_Resistance,Elixir of Force Resistance,
+OBJ_Potion_Of_Heroism,Elixir of Heroism,
+OBJ_Potion_Of_Hill_Giant_Strength,Elixir of Hill Giant Strength,
+OBJ_Potion_Of_Invisibility,Potion of Invisibility,
+OBJ_Potion_Of_Invulnerability,Elixir of Universal Resistance,
+OBJ_Potion_Of_Lightning_Resistance,Elixir of Lightning Resistance,
+OBJ_Potion_Of_Necrotic_Resistance,Elixir of Necrotic Resistance,
+OBJ_Potion_Of_Poison_Resistance,Elixir of Poison Resistance,
+OBJ_Potion_Of_Psychic_Resistance,Elixir of Psychic Resistance,
+OBJ_Potion_Of_Radiant_Resistance,Elixir of Radiant Resistance,
+OBJ_Potion_Of_Speed,Potion of Speed,
+OBJ_Potion_Of_Thunder_Resistance,Elixir of Thunder Resistance,
+OBJ_Potion_Of_Vitality,Potion of Vitality,
+OBJ_Potion_Sleep,Potion of Sleep,
+OBJ_PurpleWormPoison,Purple Worm Toxin,
+OBJ_Runepowder_Timebomb,Runepowder Bomb,
+OBJ_Scroll,An Open Letter on Oppression and Peacocks,
+OBJ_Scroll_AcidArrow,Scroll of Melf's Acid Arrow,
+OBJ_Scroll_Aid,Scroll of Aid,
+OBJ_Scroll_AnimalFriendship,Scroll of Animal Friendship,
+OBJ_Scroll_AnimateDead,Scroll of Animate Dead,
+OBJ_Scroll_ArcaneLock,Scroll of Arcane Lock,
+OBJ_Scroll_Banishment,Scroll of Banishment,
+OBJ_Scroll_BestowCurse,Scroll of Bestow Curse,
+OBJ_Scroll_BlackTentacles,Scroll of Evard's Black Tentacles,
+OBJ_Scroll_Blight,Scroll of Blight,
+OBJ_Scroll_Blindness,Scroll of Blindness,
+OBJ_Scroll_Blink,Scroll of Blink,
+OBJ_Scroll_Blur,Scroll of Blur,
+OBJ_Scroll_BurningHands,Scroll of Burning Hands,
+OBJ_Scroll_ChainLightning,Scroll of Chain Lightning,
+OBJ_Scroll_CharmPerson,Scroll of Charm Person,
+OBJ_Scroll_ChillTouch,Scroll of Bone Chill,
+OBJ_Scroll_ChromaticOrb,Scroll of Chromatic Orb,
+OBJ_Scroll_CircleOfDeath,Scroll of Circle of Death,
+OBJ_Scroll_CloudOfDaggers,Scroll of Cloud of Daggers,
+OBJ_Scroll_Cloudkill,Scroll of Cloudkill,
+OBJ_Scroll_ColorSpray,Scroll of Colour Spray,
+OBJ_Scroll_ConeOfCold,Scroll of Cone of Cold,
+OBJ_Scroll_Confusion,Scroll of Confusion,
+OBJ_Scroll_ConjureElemental,Scroll of Conjure Elemental,
+OBJ_Scroll_ConjureMinorElemental,Scroll of Conjure Minor Elemental,
+OBJ_Scroll_CrownOfMadness,Scroll of Crown of Madness,
+OBJ_Scroll_Darkness,Scroll of Darkness,
+OBJ_Scroll_Darkvision,Scroll of Darkvision,
+OBJ_Scroll_DetectThoughts,Scroll of Detect Thoughts,
+OBJ_Scroll_DimensionDoor,Scroll of Dimension Door,
+OBJ_Scroll_DisguiseSelf,Scroll of Disguise Self,
+OBJ_Scroll_Disintegrate,Scroll of Disintegrate,
+OBJ_Scroll_DominatePerson,Scroll of Dominate Person,
+OBJ_Scroll_Enlarge,Scroll of Enlarge,
+OBJ_Scroll_ExpeditiousRetreat,Scroll of Expeditious Retreat,
+OBJ_Scroll_Eyebite,Scroll of Eyebite,
+OBJ_Scroll_FalseLife,Scroll of False Life,
+OBJ_Scroll_Fear,Scroll of Fear,
+OBJ_Scroll_FeatherFall,Scroll of Feather Fall,
+OBJ_Scroll_FeignDeath,Scroll of Feign Death,
+OBJ_Scroll_FireBolt,Scroll of Fire Bolt,
+OBJ_Scroll_FireShield_Warm,Scroll of Fire Shield,
+OBJ_Scroll_Fireball,Scroll of Fireball,
+OBJ_Scroll_FlameBlade,Scroll of Flame Blade,
+OBJ_Scroll_FlamingSphere,Scroll of Flaming Sphere,
+OBJ_Scroll_FleshToStone,Scroll of Flesh to Stone,
+OBJ_Scroll_Fly,Scroll of Fly,
+OBJ_Scroll_FogCloud,Scroll of Fog Cloud,
+OBJ_Scroll_FreezingSphere,Scroll of Otiluke's Freezing Sphere,
+OBJ_Scroll_GaseousForm,Scroll of Gaseous Form,
+OBJ_Scroll_GlobeOfInvulnerability,Scroll of Globe of Invulnerability,
+OBJ_Scroll_GlyphOfWarding,Scroll of Glyph of Warding,
+OBJ_Scroll_Goodberry,Scroll of Goodberry,
+OBJ_Scroll_Grease,Scroll of Grease,
+OBJ_Scroll_GustOfWind,Scroll of Gust of Wind,
+OBJ_Scroll_Haste,Scroll of Haste,
+OBJ_Scroll_HideousLaughter,Scroll of Tasha's Hideous Laughter,
+OBJ_Scroll_HoldMonster,Scroll of Hold Monster,
+OBJ_Scroll_HoldPerson,Scroll of Hold Person,
+OBJ_Scroll_HypnoticPattern,Scroll of Hypnotic Pattern,
+OBJ_Scroll_IceKnife,Scroll of Ice Knife,
+OBJ_Scroll_IceStorm,Scroll of Ice Storm,
+OBJ_Scroll_Invisibility,Scroll of Invisibility,
+OBJ_Scroll_Invisibility_Greater,Scroll of Greater Invisibility,
+OBJ_Scroll_IrresistibleDance,Scroll of Otto's Irresistible Dance,
+OBJ_Scroll_Knock,Scroll of Knock,
+OBJ_Scroll_LightningBolt,Scroll of Lightning Bolt,
+OBJ_Scroll_MageArmor,Scroll of Mage Armour,
+OBJ_Scroll_MagicMissile,Scroll of Magic Missile,
+OBJ_Scroll_MagicWeapon,Scroll of Magic Weapon,
+OBJ_Scroll_MirrorImage,Scroll of Mirror Image,
+OBJ_Scroll_MistyStep,Scroll of Misty Step,
+OBJ_Scroll_PhantasmalKiller,Scroll of Phantasmal Killer,
+OBJ_Scroll_PlanarBinding,Scroll of Planar Binding,
+OBJ_Scroll_Polymorph,Scroll of Polymorph,
+OBJ_Scroll_ProtectionFromEnergy,Scroll of Protection from Energy,
+OBJ_Scroll_ProtectionFromEvilAndGood,Scroll of Protection from Evil and Good,
+OBJ_Scroll_RayOfEnfeeblement,Scroll of Ray of Enfeeblement,
+OBJ_Scroll_RayOfFrost,Scroll of Ray of Frost,
+OBJ_Scroll_RayOfSickness,Scroll of Ray of Sickness,
+OBJ_Scroll_RemoveCurse,Scroll of Remove Curse,
+OBJ_Scroll_Revivify,Scroll of Revivify,
+OBJ_Scroll_Revivify_TrueResurrection,Scroll of True Resurrection,
+OBJ_Scroll_ScorchingRay,Scroll of Scorching Ray,
+OBJ_Scroll_SeeInvisibility,Scroll of See Invisibility,
+OBJ_Scroll_Seeming,Scroll of Seeming,
+OBJ_Scroll_Shatter,Scroll of Shatter,
+OBJ_Scroll_ShockingGrasp,Scroll of Shocking Grasp,
+OBJ_Scroll_Sleep,Scroll of Sleep,
+OBJ_Scroll_SleetStorm,Scroll of Sleet Storm,
+OBJ_Scroll_Slow,Scroll of Slow,
+OBJ_Scroll_SpeakWithDead,Scroll of Speak with Dead,
+OBJ_Scroll_StinkingCloud,Scroll of Stinking Cloud,
+OBJ_Scroll_Stoneskin,Scroll of Stoneskin,
+OBJ_Scroll_Sunbeam,Scroll of Sunbeam,
+OBJ_Scroll_Telekinesis,Scroll of Telekinesis,
+OBJ_Scroll_Thunderwave,Scroll of Thunderwave,
+OBJ_Scroll_VampiricTouch,Scroll of Vampiric Touch,
+OBJ_Scroll_WallOfFire,Scroll of Wall of Fire,
+OBJ_Scroll_WallOfIce,Scroll of Wall of Ice,
+OBJ_Scroll_WallOfStone,Scroll of Wall of Stone,
+OBJ_Scroll_Web,Scroll of Web,
+OBJ_Scroll_WitchBolt,Scroll of Witch Bolt,
+OBJ_SerpentVenom,Serpent Fang Toxin,
+OBJ_THR_SpiderEggSack,Spider Egg Sac,
+OBJ_TadpolePowerJar,Mind Flayer Parasite Specimen,
+OBJ_Tool_Shovel,Shovel,
+OBJ_Topaz,The Bitch Queen's Blessing,
+OBJ_VolatileBladder,Nautiloid Tank,
+OBJ_WyvernPoison,Wyvern Toxin,
+ORI_Wyll_Infernal_Rapier,Infernal Rapier,Адская рапира
+ORI_Wyll_Infernal_Robe,Infernal Robe,Адская мантия
+PLA_ConflictedFlind_Flail_Broken,Shattered Flail,Разбитый цеп
+PLA_SmugglerRing,Smuggler's Ring,Кольцо контрабандиста
+PLA_WPN_DreadedSkullsFlail,Flail of Dread Skulls,
+PLA_WPN_SwordOfJustice,Sword of Justice,Клинок Правосудия
+PLA_ZhentCave_Gloves,Gloves of Hail of Thorns,Перчатки града шипов
+QUEST_GOB_SuspiciousMeat,Suspicious Meat,
+QUEST_HAG_GrenadeFire,Flammable Slime Bomb,
+QUEST_LOW_Bhaal_Amulet,Amulet of Bhaal,Амулет Баала
+QUEST_WYR_RestoredMagicRing,Tarnished Ring,Потемневшее кольцо
+Quest_GLO_Moonlantern,Moonlantern,Лунный фонарь
+Quest_GLO_Moonlantern_Gale,Shadow Lantern,Фонарь теней
+Quest_HAG_HagLair_Staff,Staff of Crones,Посох ведьм
+Quest_SCL_Moonblade,Moonblade,
+SCE_KhalidsGift,Khalid's Gift,Подарок Халида
+SCL_MAG_SkepticalRobber_WifesRing,Family Ring,Фамильное кольцо
+SCL_MastiffPoachers_Ring,Shadow-Cloaked Ring,Окутанное тенью кольцо
+SHA_JusticiarArmor_Gloves,Dark Justiciar Gauntlets,Рукавицы темного юстициара (необычные)
+SHA_SandthiefsRing,Sandthief's Ring,
+SHA_SharSpear,Spear of Night,Копье Ночи
+Solution_Toxin_Basic,Simple Toxin,
+TWN_AasimarSurvivor_HazmatSuit,Protective Plate,Костюм химической защиты
+TWN_BondedByLove_HusbandsRing,True Love's Embrace,
+TWN_BondedByLove_WifesRing,True Love's Caress,Ласка любимого
+TWN_BootsOfApparentDeath,Boots of Apparent Death,Сапоги притворной смерти
+TWN_RatCatcher,Rat Bat,Крысиная бита
+TWN_SharDagger,Ritual Dagger of Shar,Ритуальный кинжал Шар
+TWN_ShortswordOfStealth,Assassin's Shortsword,Короткий меч ассасина
+TWN_Tollhouse_TradersRing,Firzu's Ring of Trading,Торговое кольцо Фирзу
+UND_DeadInWater_CallarduranTrinket,Fetish of Callarduran Smoothhands,Каллардуранский идол
+UND_DuergarBlacksmithHammer,Skybreaker,Раскалывающий Небеса
+UND_DuergarRaft_GruesomeHammer,Intransigent Warhammer,Бескомпромиссный боевой молот
+UND_DuergarRaft_PestKillerAxe,Exterminator's Axe,Топор истребителя
+UND_Duergar_ShortswordOfFirstBlood,Shortsword of First Blood,Меч первой крови
+UND_FairyRing_AntiCharmHelmet,Helmet of Autonomy,Шлем независимости
+UND_InjuredGnome_DuergarAntidote,Duerger Antidote,
+UND_Justiciar_Chainshirt_Magic,Dark Justiciar Mail,Кольчуга темного юстициара
+UND_Justiciar_Helmet_Magic,Dark Justiciar Helm,Шлем темного юстициара (Необычный)
+UND_Justiciar_Mask_Magic,Dark Justiciar Mask,Маска темного юстициара
+UND_KC_Elder_Warpick,Deep Delver,Глубинная пика
+UND_KC_RingOfAbsolute,Ring of Absolute Force,Кольцо абсолютной силы
+UND_Minotaur_BeltAmulet,Amulet of the Unworthy,Амулет недостойных
+UND_MonkAmulet_Amulet,Sentient Amulet,Разумный амулет
+UND_MushroomHunger_RingOfExploration,Explorer's Ring,Кольцо исследователя
+UND_Myco_Alchemist_HealerGloves,Herbalist's Gloves,Перчатки травника
+UND_MyconidAmulet_Good,Envoy's Amulet,
+UND_Nere_Sword,Sword of Screams,Клинок крика
+UND_Noblestalk,Noblestalk Piece,
+UND_OBJ_Runepowder_Barrel,Runepowder Barrel,
+UND_OBJ_Runepowder_Vial,Runepowder Vial,
+UND_ShadowOfMenzoberranzan,Shadow of Menzoberranzan,Тень Мензоберранзана
+UND_SharranCrossbow,Sharran Crossbow,Шаритский арбалет
+UND_SocietyOfBrilliance_DarkvisionRing,Sunwalker's Gift,Дар Солнцехода
+UND_SocietyOfBrilliance_MagicMissileNecklace,Psychic Spark,Сила мысли
+UND_SocietyOfBrilliance_PullingRing,Ring of Salving,Кольцо успокоения
+UND_SocietyOfBrilliance_ResonanceStaff,Creation's Echo,Отзвук творения
+UND_StrengthChair_Leg,Club of Hill Giant Strength,Дубина холмового великана
+UND_SussurTree_Flower,Sussur Bloom,
+UND_Tower_AmuletDetectThoughts,Uncovered Mysteries,Нераскрытые тайны
+UND_Tower_BootsFeatherFall,Mystra's Grace,Милость Мистры
+UND_Tower_RingArcana,Mage's Friend,Друг мага
+UND_Tower_RingLight,Guiding Light,Направляющий свет
+UND_Tower_StaffBlessMystra,Staff of Arcane Blessing,Посох мистического благословения
+UND_Wand_Fireballs_Crooked,Crooked Wand of Fireballs,
+UND_Wand_Fireballs_Snapped,Broken Wand of Fireballs,
+UNI_ARM_DebtorAlt_Body,Debtor's Attire,
+UNI_ARM_Debtor_Body,Debtor's Attire,
+UNI_ARM_OfArchery_Gloves,Gloves of Archery,Перчатки лучника
+UNI_ARM_OfDefense_Gloves,Bracers of Defence,Защитные наручи
+UNI_ARM_OfGiantHillStrength_Gloves,Gauntlets of Hill Giant Strength,Рукавицы силы холмового великана
+UNI_ARM_OfMissileSnaring_Gloves,Gloves of Missile Snaring,Перчатки ловли снарядов
+UNI_ARM_OfTeleportation_Helm,Helm of Arcane Gate,
+UNI_ARM_Sarevok_Armor,Sarevok's Wretched Armour,
+UNI_ARM_Sarevok_Horned_Helmet,Sarevok's Horned Helmet,Рогатый шлем Саревока
+UNI_Astarion_StarterArmor,Padded Armour,Стеганый доспех
+UNI_Bow_SpellslotRecharge,Spellthief,Похититель заклинаний
+UNI_BrilliantRetort,Brilliant Retort,
+UNI_Cazador_RitualDagger,Rhapsody,Рапсодия
+UNI_Daisy_Boots,Dreamsome Boots,Сапоги сновидений
+UNI_Daisy_Gloves,Metallic Gloves (Dream Guardian),
+UNI_DarkJusticiarArmor_HalfPlate,Dark Justiciar Half-Plate,Полулаты темного юстициара (Редкий)
+UNI_DarkJusticiar_Helmet,Dark Justiciar Helmet,Шлем темного юстициара
+UNI_DarkUrge_Bhaal_Cloak,The Deathstalker Mantle,Плащ охотника смерти
+UNI_DoomHammer,Doom Hammer,Роковой молот
+UNI_Druid_Helmet_Circlet,Key of the Ancients,Ключ древних
+UNI_GOB_SeluneAmulet,Amulet of Selûne's Chosen,Амулет избранных Селунэ
+UNI_GaleRobe,Simple Robe,Простая мантия
+UNI_HAG_Wand_SummonHusband,Bitter Divorce,Горькое расставание
+UNI_HAV_Thiefling_ArrowOfSlaying,Arrow of Sparrow Slaying,
+UNI_Halsin_Gloves,Druidic Bracers,Наручи друида
+UNI_Jaheira_Boots,Jaheira’s Boots,Сапоги Джахейры
+UNI_Jaheira_Gloves,Leather Gloves,Кожаные перчатки
+UNI_Karlach_Gloves,Leather Gloves,Кожаные перчатки
+UNI_Karlach_Shoes,Karlach's Boots,Сапоги Карлах
+UNI_Karlach_StarterArmor,Barbarian Clothes,Одежды варвара
+UNI_LOW_BestialCommunionScroll,Scroll of Bestial Communion,
+UNI_LOW_CurriculumOfStrategyScroll,Scroll of Artistry of War,
+UNI_LOW_DethroneScroll,Scroll of Dethrone,
+UNI_LOW_KarabasansGift_Grenade,Karabasan's Gift,Дар Карабасана мастера Мецтли
+UNI_LOW_SteelWatchFoundry_ExplodingCollar,Kill Collar,Ошейник-убийца
+UNI_LOW_SzarrRing,Szarr Family Ring,Фамильный перстень Зарров
+UNI_Leather_Halsin,Druid Leather Armour,Друидский кожаный доспех
+UNI_Leather_Jaheira,Leather Armour,Кожаный доспех
+UNI_MartyrAmulet,Amulet of Elemental Torment,Амулет мучения стихий
+UNI_MassHealRing,The Whispering Promise,
+UNI_Poison_Brewer,Thisobald's Brewed-Up Bellyglummer,
+UNI_Ravengard_Plate,Emblazoned Plate of the Marshal,Маршальские латы с эмблемой
+UNI_RepeatStaff,Corellon's Grace,Милость Кореллона
+UNI_RobeOfSummer,Robe of Summer,Одеяние лета
+UNI_SHA_DarkJusticiar_Boots,Dark Justiciar Boots,Сапоги темного юстициара
+UNI_ShadowheartCirclet,Circlet,Обруч
+UNI_StaffOfRain,Rain Dancer,"""Танцующий под дождем"""
+UNI_SuperheavyWeapon,Very Heavy Greataxe,Очень тяжелый двуручный топор
+UNI_TWN_Scroll_FleshToGold,Signed Trade Visa,
+UNI_UND_RingOfMindShielding,Ring of Mind-Shielding,Кольцо защиты разума
+UNI_WYR_Circus_ClownHammer,Clown Hammer,Клоунский молот
+UNI_WYR_Circus_WheelRing,Djinni Ring,Кольцо джинна
+UNI_WYR_Thiefling_HolyHandSoap,Holy Hand Soap,
+WPN_Apostle_Scythe,Scythe of Myrkul,
+WPN_Battleaxe_1,Ceremonial Battleaxe,Церемониальный боевой топор
+WPN_Battleaxe_Rusty,Rusty Battleaxe,
+WPN_Brewer_Mace,Brewing Ladle,
+WPN_Club,Broken Club,Сломанная дубинка
+WPN_Dagger,Vampiric Dagger,
+WPN_Dagger_1,Dagger +1,Кинжал +1
+WPN_Dart,Dart,
+WPN_Dart_1,Dart +1,
+WPN_Dart_2,Dart +2,
+WPN_Djinni_Scimitar_PlanarAlly,Djinni Scimitar,Скимитар джинна
+WPN_Flail,Flail,Цеп
+WPN_Flail_1,Flail +1,Цеп +1
+WPN_Flail_2,Flail +2,Цеп +2
+WPN_Flail_Air_Myrmidon,Flail of the Vortex,Цеп вихря
+WPN_Flail_Pact,Pactbound Flail,
+WPN_Flail_Rusty,Rusty Flail,
+WPN_Glaive,Glaive,Глефа
+WPN_Glaive_1,Glaive +1,Глефа +1
+WPN_Glaive_2,Glaive +2,
+WPN_Gnoll_Flind_Flail,Chaos Flail,
+WPN_Goblin_Quarterstaff,Ritual Staff,Ритуальный посох
+WPN_Greataxe_Rusty,Rusty Greataxe,
+WPN_Greatclub,Greatclub,Дубина
+WPN_Greatclub_1,Greatclub +1,Дубина +1
+WPN_Greatclub_2,Greatclub +2,
+WPN_Greatsword,Greatsword +1,Двуручный меч +1
+WPN_HandCrossbow_1,Hand Crossbow +1,Одноручный арбалет +1
+WPN_HandCrossbow_2,Hand Crossbow +2,Одноручный арбалет +2
+WPN_HandCrossbow_Rusty,Rusty Hand Crossbow,
+WPN_Handaxe,Handaxe,Топорик
+WPN_HeavyCrossbow_1,Heavy Crossbow +1,Тяжелый арбалет +1
+WPN_HeavyCrossbow_Gith,Githyanki Crossbow,Арбалет гитьянки
+WPN_Imp_Handaxe,Handaxe,Топорик
+WPN_Imp_LightCrossbow,Light Crossbow,Легкий арбалет
+WPN_Imp_Scimitar,Scimitar,Скимитар
+WPN_Javelin,Javelin,Пилум
+WPN_Javelin_1,Javelin +1,Пилум +1
+WPN_Katana,Katana,Катана
+WPN_KingsKnife,King's Knife,Королевский нож
+WPN_Kuotoa_Spear,BOOOAL's Arms,Десница БУУАЛА
+WPN_LightCrossbow,Light Crossbow,Легкий арбалет
+WPN_LightCrossbow_1,Light Crossbow +1,Легкий арбалет +1
+WPN_Longsword_1,Ceremonial Longsword,Церемониальный длинный меч
+WPN_Longsword_Rusty,Rusty Longsword,Ржавый длинный меч
+WPN_Mace_1,Ceremonial Mace,Церемониальная булава
+WPN_Maul_Rusty,Rusty Maul,Ржавый двуручный молот
+WPN_Merregon_Halberd,Merregon Halberd,Алебарда меррегона
+WPN_Morningstar,Morningstar,Моргенштерн
+WPN_Morningstar_1,Morningstar +1,Моргенштерн +1
+WPN_Morningstar_Rusty,Rusty Morningstar,Ржавый моргенштерн
+WPN_Orthon_Crossbow,Hand Crossbow,Одноручный арбалет
+WPN_Pitchfork,Pitchfork,Вилы
+WPN_Quarterstaff_2,Quarterstaff +2,Боевой посох +2
+WPN_Quaterstaff_Dryad_ConjureWoodlandBeings,Twisted Oak Crook,Крюк из крученого дуба
+WPN_Rapier_1,Verminsign,
+WPN_Rapier_Rusty,Rusty Rapier,
+WPN_Redcap_Sickle,Sickle (Redcap),Серп (Красношапка)
+WPN_Sahuagin_Spear_B,Sahuagin Spear,Сахваджинское копье
+WPN_Scimitar,Scimitar,Скимитар
+WPN_Scimitar_Fire_Myrmidon,Scimitar of Cinder,Скимитар золы
+WPN_Scimitar_FlameBlade,Flame Blade,
+WPN_Shortbow_Skeleton_AnimateDead,Makeshift Bow,Самодельный лук
+WPN_Shortsword,Shortsword,Короткий меч
+WPN_Sickle,Sickle,Серп
+WPN_SkullFlail,Flail of Myrkul,Цеп Миркула
+WPN_SkullFlail_1,Myrkulite Scourge,Дьявольский цеп Миркула
+WPN_Spear,Spear,Копье
+WPN_Spear_2,Spear +2,Копье +2
+WPN_Torch,Torch,Факел
+WPN_Torch_Blue,Cemetery-Blue Torch,Факел: кладбищенский синий
+WPN_Torch_Green,Plague-Green Torch,Факел: чумной зеленый
+WPN_Torch_Purple,Drunk-Purple Torch,Факел: пьяный фиолетовый
+WPN_ToySword,Practice Sword,Учебный меч
+WPN_Trident_Water_Myrmidon,Trident of the Depths,Трезубец глубин
+WPN_Warhammer_1,Ceremonial Warhammer,Церемониальный боевой молот
+WPN_Warhammer_Azer,Azer Warhammer,Эйзерский боевой молот
+WPN_Warhammer_Rusty,Rusty Warhammer,
+WPN_Warpick_Rusty,Rusty War Pick,
+WYR_Circus_HandaxeReturning,Comeback Handaxe,Топорик возвращения
+WYR_Circus_MumblingStaff,Staff of a Mumbling Wizard,Посох косноязычного волшебника
+WYR_Circus_TeleportBoots,Boots of Very Fast Blinking,Сапоги очень быстрого мерцания
+WYR_Circus_ThiefGloves,Unlucky Thief's Gloves,Перчатки незадачливого вора
+WYR_ExplosiveToy,Surprise-Based Teddy Bear,
+WYR_Gortash_Grenade,Concussion Grenade,
+WYR_Gortash_PhaseOptimizer,Phase Optimizer,
+WYR_Gortash_Reflectoguard,Reflectoguard,

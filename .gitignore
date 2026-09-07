@@ -1,0 +1,15 @@
+# Agent working files: briefs, findings, handoffs, scratch.
+.agent/
+
+# Local virtualenv and the save files it works on.
+venv/
+*.lsv
+newage.bin
+
+__pycache__/
+*.py[cod]
+
+# Working notes that live with the agent, not in the history.
+handoff.md
+skill-handoff.md
+todo.md
