@@ -51,6 +51,23 @@ class LSF:
         try: return self.names[b][e]
         except: return f'<bad {b}/{e}>'
 
+
+def scratch(f, want):
+    """Raw bytes of the ScratchBuffer attribute called `want`.
+
+    The ECS blob is not a file of its own: it is one type 25 attribute named
+    NewAge inside Globals.lsf.  Values sit back to back in the value section in
+    attribute order, so the offset is the running sum of the lengths before it.
+    """
+    off = 0
+    for i in range(len(f.attrs_raw) // 12):
+        ni, tl, _ = struct.unpack_from('<IIi', f.attrs_raw, i * 12)
+        t, ln = tl & 0x3F, tl >> 6
+        if t == 25 and f.name(ni) == want:
+            return f.values[off:off + ln]
+        off += ln
+    raise LookupError('no scratch buffer named %s' % want)
+
 if __name__ == '__main__':
     f = LSF(sys.argv[1])
     print(f.hdr)

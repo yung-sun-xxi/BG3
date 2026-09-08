@@ -52,11 +52,31 @@ class BlobTest(unittest.TestCase):
         for i, c in enumerate(self.want['canon']):
             self.assertEqual(self.b.of_guid(self.b.guid(i)), c, i)
 
+    def test_a_stored_pointer_is_biased_and_folded(self):
+        # A pointer inside a record carries the same 48 byte bias as `ptr` in
+        # the index; reading it raw lands three entities early.  The slot it
+        # names then has to be folded onto the first slot with that GUID.
+        got = [self.b.entity(p) for (p,) in self.b.rows('game.test.v0.RefComponent', '<Q')]
+        self.assertEqual(got, self.want['refs'])
+        self.assertIsNone(self.b.entity(self.b.ent_at - 48 + 4))
+
+    def test_a_span_reads_back_what_it_covers(self):
+        beg, end = self.b.elem('game.test.v0.SpanComponent', 0, '<2Q')
+        n = (end - beg) // 16
+        self.assertEqual([r[0] for r in self.b.pool(beg, n, '<I12x')], self.want['span'])
+
+    def test_positions_index_by_entity_not_by_slot(self):
+        # Gamma is carried by entities 2 and 4, so its elements are at 0 and 1.
+        # Indexing it by the entity number would read past its own block.
+        self.assertEqual(self.b.positions('game.test.v0.Gamma'), {2: 0, 4: 1})
+
     def test_element_addressing(self):
         # Off by one element and off by 48 bytes both land on a neighbour, so
         # every element of every component is compared, not just the first.
         for cid, (name, elem, cnt, _) in enumerate(self.want['plan']):
             if name == 'core.v0.EntityId':
+                continue
+            if name in ('game.test.v0.RefComponent', 'game.test.v0.SpanComponent'):
                 continue
             for k in range(cnt):
                 got = self.b.d[self.b.at(name, k):self.b.at(name, k) + elem]
