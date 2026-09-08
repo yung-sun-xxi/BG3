@@ -9,7 +9,7 @@ itself, or a directory that already holds `Globals.lsf` (loose or under
 
 Four files come out, into `BG3_OUT_DIR` or beside the save:
 
-    party.md      the build: abilities, every equipment slot, spells
+    party.md      the build: abilities, feats, every equipment slot, spells
     party.json    the same, for the bg3 skill to read instead of a screenshot
     pool.md       everything the party carries and nobody wears
     items_all.csv one row per item, with its slot when it is worn
@@ -51,6 +51,11 @@ def name_of(sid):
     return en or '`%s`' % sid
 
 
+def feats_line(c):
+    """Feats as `Name (level 4)`, in level order; empty when none were picked."""
+    return ', '.join('%s (ур. %d)' % (f['feat'], f['level']) for f in c.feats)
+
+
 def open_save(path):
     """A Save from a .lsv or from a directory, unpacking the .lsv if need be."""
     if os.path.isfile(path) and path.lower().endswith('.lsv'):
@@ -77,17 +82,22 @@ def party_md(chars, info):
                  % (info.get('Current Level'), (info.get('Difficulty') or ['?'])[0],
                     info.get('Game Version')))
     L.append('Всё ниже прочитано из ECS-блоба: состав партии, класс, уровень, '
-             'слоты экипировки, подготовленные заклинания и книга. Раса — из '
-             '`SaveInfo.json`.\n')
-    L.append('| Персонаж | Класс | Ур. | ' + ' | '.join(party.ABILITIES) + ' | Владение |')
-    L.append('|---|---|---|' + '---|' * 7)
+             'черты, слоты экипировки, подготовленные заклинания и книга. '
+             'Раса — из `SaveInfo.json`.\n')
+    L.append('Характеристики — итоговые, вместе с надетым. Предмет, который '
+             'ставит или поднимает характеристику, уже учтён в числе, и базы '
+             'персонажа в сейве нет.\n')
+    L.append('| Персонаж | Класс | Ур. | ' + ' | '.join(party.ABILITIES)
+             + ' | Владение | Черты |')
+    L.append('|---|---|---|' + '---|' * 8)
     for c in chars:
-        L.append('| %s | %s | %d | %s | +%d |'
+        L.append('| %s | %s | %d | %s | +%d | %s |'
                  % (c.name, ', '.join(x for x in (c.cls, c.sub) if x), c.level,
                     ' | '.join(str(c.abilities.get(a, '—')) for a in party.ABILITIES),
-                    c.proficiency))
+                    c.proficiency, feats_line(c) or '—'))
     for c in chars:
         L.append('\n## %s — %s %d\n' % (c.name, c.cls or '?', c.level))
+        L.append('Черты: %s\n' % (feats_line(c) or '—'))
         L.append('| Слот | Предмет |')
         L.append('|---|---|')
         for num, slot, ent, sid in c.gear():
@@ -144,7 +154,7 @@ def main(argv):
                pool={s: n for s, n in pool.most_common()},
                characters=[dict(
                    name=c.name, entity=c.entity, level=c.level, cls=c.cls,
-                   sub=c.sub, race=c.race, classes=c.classes,
+                   sub=c.sub, race=c.race, classes=c.classes, feats=c.feats,
                    abilities=c.abilities, proficiency=c.proficiency,
                    spells=sorted(c.spells), prepared=sorted(c.prepared),
                    worn={party.SLOTS.get(n, str(n)): s
@@ -170,10 +180,11 @@ def main(argv):
             w.writerow([sid, ru, en, e, hold[e], c.name if c else '',
                         party.SLOTS.get(n, '') if c else ''])
 
-    print('персонажей=%d надето=%d в_пуле=%d заклинаний=%s подготовлено=%s'
+    print('персонажей=%d надето=%d в_пуле=%d заклинаний=%s подготовлено=%s черт=%s'
           % (len(chars), sum(len(c.worn) for c in chars), sum(pool.values()),
              '/'.join(str(len(c.spells)) for c in chars),
-             '/'.join(str(len(c.prepared)) for c in chars)))
+             '/'.join(str(len(c.prepared)) for c in chars),
+             '/'.join(str(len(c.feats)) for c in chars)))
 
 
 if __name__ == '__main__':

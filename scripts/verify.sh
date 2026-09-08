@@ -12,12 +12,14 @@ PY=${PY:-python3}
 [ -x .agent/venv/bin/python ] && PY=.agent/venv/bin/python
 
 SAVES=${BG3_SAVE_DIR:-.agent/saves}
-EXPECT='персонажей=4 надето=52 в_пуле=497 заклинаний=95/28/293/30 подготовлено=61/28/92/30'
+EXPECT='персонажей=4 надето=52 в_пуле=497 заклинаний=95/28/293/30 подготовлено=61/28/92/30 черт=2/2/2/2'
 fail=0
 
 echo "== unit tests =="
-"$PY" tests/test_blob.py 2>&1 | grep -v ResourceWarning
-[ "${PIPESTATUS[0]}" -eq 0 ] || fail=1
+for t in tests/test_blob.py tests/test_party.py; do
+    "$PY" "$t" 2>&1 | grep -v ResourceWarning
+    [ "${PIPESTATUS[0]}" -eq 0 ] || fail=1
+done
 
 echo
 echo "== integration: real save =="
