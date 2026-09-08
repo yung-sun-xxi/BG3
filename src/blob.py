@@ -18,8 +18,10 @@ uniform, not a per-array header: consecutive blocks sit at ptr + cnt * elem
 (measured on 321 of 355 neighbouring pairs, the rest separated only by padding
 to an 8 byte boundary), and the last block ends where the index region begins.
 
-The one component that does not obey it is game.stats.v0.ClassesComponent,
-which needs a further +80 that has never been explained.
+No component is an exception. Two looked like one for a while -
+ClassesComponent seemed to need +80 and SpellBookComponent seemed to take a
+raw offset - and both turned out to be misread record layouts; the layouts
+live in party.py.
 """
 
 import re
