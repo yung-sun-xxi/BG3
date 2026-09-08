@@ -31,7 +31,7 @@ falls back to `BG3_SAVE_DIR`, then to `.agent/saves`. Output goes to
 
 | file | what it is |
 |---|---|
-| `party.md` | the build: abilities, every slot, spells |
+| `party.md` | the build: class, abilities, every slot, prepared spells, the whole book |
 | `party.json` | the same, for a skill to read |
 | `pool.md` | everything the party carries and nobody wears |
 | `items_all.csv` | one row per item, with its slot when it is worn |
@@ -67,14 +67,18 @@ component, a pointer read without its bias.
 
 ## What the reader can and cannot do
 
-Party, slots and spells are read out of the blob. `Globals.lsf` supplies exactly
-two things: an item's stat id, which the blob never spells out, and the
-coordinates that tie a character to their `SaveInfo.json` record, which is where
-the class and race labels come from. Without `SaveInfo.json` everything still
-comes out, with the class column blank.
+Party, class, level, slots, the spell book and the prepared list are read out
+of the blob. `Globals.lsf` supplies exactly two things: an item's stat id, which
+the blob never spells out, and the coordinates that tie a character to their
+`SaveInfo.json` record, which is where the race label comes from. Without
+`SaveInfo.json` everything still comes out, with the race column blank.
+
+Classes are GUIDs in the blob; eleven of the twelve are named in `src/party.py`
+(Bard has not been seen in a save yet) and an unknown one is printed as its
+first eight hex characters rather than dropped. Subclass names are known only
+for the four this save carries.
 
 Known gaps, with the evidence for each, are in `.agent/findings.md`, which is not
-committed. The short version: the mods' items have no names anywhere; the class
-and subclass in the blob are GUIDs that have not been mapped to names; and four
-of the thirty-six index-array segments are placed by a guess that
-`Blob.ambiguous` reports instead of hiding.
+committed. The short version: the mods' items have no names anywhere; the
+subclass table is four entries long; and four of the thirty-six index-array
+segments are placed by a guess that `Blob.ambiguous` reports instead of hiding.

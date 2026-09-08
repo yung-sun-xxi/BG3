@@ -12,7 +12,7 @@ PY=${PY:-python3}
 [ -x .agent/venv/bin/python ] && PY=.agent/venv/bin/python
 
 SAVES=${BG3_SAVE_DIR:-.agent/saves}
-EXPECT='персонажей=4 надето=52 в_пуле=497 заклинаний=95/28/293/30'
+EXPECT='персонажей=4 надето=52 в_пуле=497 заклинаний=95/28/293/30 подготовлено=61/28/92/30'
 fail=0
 
 echo "== unit tests =="

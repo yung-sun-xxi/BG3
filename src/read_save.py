@@ -76,8 +76,9 @@ def party_md(chars, info):
         L.append('Локация `%s`, сложность %s, версия игры %s.\n'
                  % (info.get('Current Level'), (info.get('Difficulty') or ['?'])[0],
                     info.get('Game Version')))
-    L.append('Всё ниже прочитано из ECS-блоба: состав партии, слоты экипировки '
-             'и книга заклинаний. Класс и раса — из `SaveInfo.json`.\n')
+    L.append('Всё ниже прочитано из ECS-блоба: состав партии, класс, уровень, '
+             'слоты экипировки, подготовленные заклинания и книга. Раса — из '
+             '`SaveInfo.json`.\n')
     L.append('| Персонаж | Класс | Ур. | ' + ' | '.join(party.ABILITIES) + ' | Владение |')
     L.append('|---|---|---|' + '---|' * 7)
     for c in chars:
@@ -96,6 +97,8 @@ def party_md(chars, info):
             L.append('\nВне боевых слотов: '
                      + ', '.join('%s — %s' % (party.SLOTS.get(n, n), name_of(s))
                                  for n, (_, s) in extra))
+        L.append('\n### Подготовлено и активно (%d)\n' % len(c.prepared))
+        L.append(', '.join('`%s`' % s for s in sorted(c.prepared)) or '—')
         L.append('\n### Книга заклинаний и действий (%d)\n' % len(c.spells))
         L.append(', '.join('`%s`' % s for s in sorted(c.spells)) or '—')
     return '\n'.join(L) + '\n'
@@ -141,8 +144,9 @@ def main(argv):
                pool={s: n for s, n in pool.most_common()},
                characters=[dict(
                    name=c.name, entity=c.entity, level=c.level, cls=c.cls,
-                   sub=c.sub, race=c.race, abilities=c.abilities,
-                   proficiency=c.proficiency, spells=sorted(c.spells),
+                   sub=c.sub, race=c.race, classes=c.classes,
+                   abilities=c.abilities, proficiency=c.proficiency,
+                   spells=sorted(c.spells), prepared=sorted(c.prepared),
                    worn={party.SLOTS.get(n, str(n)): s
                          for n, (_, s) in sorted(c.worn.items())})
                    for c in chars])
@@ -166,9 +170,10 @@ def main(argv):
             w.writerow([sid, ru, en, e, hold[e], c.name if c else '',
                         party.SLOTS.get(n, '') if c else ''])
 
-    print('персонажей=%d надето=%d в_пуле=%d заклинаний=%s'
+    print('персонажей=%d надето=%d в_пуле=%d заклинаний=%s подготовлено=%s'
           % (len(chars), sum(len(c.worn) for c in chars), sum(pool.values()),
-             '/'.join(str(len(c.spells)) for c in chars)))
+             '/'.join(str(len(c.spells)) for c in chars),
+             '/'.join(str(len(c.prepared)) for c in chars)))
 
 
 if __name__ == '__main__':
