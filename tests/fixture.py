@@ -27,7 +27,16 @@ PLAN = [
     ('game.test.v0.Gamma',            4,  2, (2, 4)),
     ('game.test.v1.BetaComponent',    4,  3, (1, 3, 5)),
     ('game.test.v0.DeltaComponent',  16,  4, (0, 2, 4, 6)),
+    # Pointers to entity slots, biased like every pointer in the file, and
+    # aimed at repeated slots so folding onto the first slot is exercised.
+    ('game.test.v0.RefComponent',     8,  6, (0, 1, 2, 3, 4, 5)),
+    # A begin/end pair over DeltaComponent's block, so a span can be read back
+    # and compared with what was planted in it.
+    ('game.test.v0.SpanComponent',   16,  8, (0, 1, 2, 3, 4, 5, 6, 7)),
 ]
+
+# Entity slot each RefComponent element points at.  8 and 10 repeat slot 0.
+REFS = (0, 2, 4, 6, 8, 10)
 
 # Entity slots 8..11 repeat the GUIDs of slots 0, 3, 0 and 7, the way the real
 # table repeats a GUID once per reference to it.
@@ -51,6 +60,13 @@ def build():
     for cid, (name, elem, cnt, _) in enumerate(PLAN):
         if name == 'core.v0.EntityId':
             body = b''.join(guid(GUID_SOURCE[k]) for k in range(cnt))
+        elif name == 'game.test.v0.RefComponent':
+            base = ptrs['core.v0.EntityId']
+            body = b''.join(struct.pack('<Q', base + s * 16) for s in REFS)
+        elif name == 'game.test.v0.SpanComponent':
+            d0 = ptrs['game.test.v0.DeltaComponent']
+            body = struct.pack('<2Q', d0, d0 + 4 * 16)
+            body += b'\xff' * (cnt * elem - len(body))
         else:
             body = b''.join(element(cid, k, elem) for k in range(cnt))
         assert len(body) == cnt * elem
@@ -81,9 +97,11 @@ def build():
     d += idx + table + b'\x00' * NAME_PAD + records
     assert len(d) - len(records) - NAME_PAD - len(table) == names_at
 
+    canon = [GUID_SOURCE.index(g) for g in GUID_SOURCE]
     return d, dict(plan=PLAN, ptrs=ptrs, index_at=index_at, names_at=names_at,
-                   index_off=index_off, nent=NENT,
-                   canon=[GUID_SOURCE.index(g) for g in GUID_SOURCE])
+                   index_off=index_off, nent=NENT, canon=canon,
+                   refs=[canon[s] for s in REFS],
+                   span=[5 * 1000 + k for k in range(4)])
 
 
 if __name__ == '__main__':

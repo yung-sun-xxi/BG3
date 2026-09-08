@@ -1,8 +1,13 @@
 # BG3 save reader
 
-Reads a Baldur's Gate 3 save and answers who in the party is carrying what, and
-what each of them is actually wearing. The point is to feed the `bg3` skill from
-the save file instead of from a screen recording.
+Reads a Baldur's Gate 3 save and answers what each party member is actually
+built out of: abilities, level, every equipment slot with the item in it, and
+the whole spell book. The point is to feed the `bg3` skill from the save file
+instead of from a screen recording.
+
+Anything nobody is wearing goes into one shared pool. Which member's bag it sits
+in is not reported, because in play the party's bags are one pot; the only
+ownership that changes a decision is what is on someone.
 
 ## Build and test
 
@@ -13,15 +18,38 @@ the save file instead of from a screen recording.
 That is the whole recipe; nothing else in the repository repeats it. It runs the
 unit tests always, and the real extraction only when a save is present.
 
+## Reading a save
+
+```
+python src/read_save.py path/to/QuickSave_418.lsv
+```
+
+A `.lsv` is unpacked next to itself; a directory that already holds `Globals.lsf`
+(loose, or under `extracted/`) is read as it is. With no argument the script
+falls back to `BG3_SAVE_DIR`, then to `.agent/saves`. Output goes to
+`BG3_OUT_DIR` or beside the save:
+
+| file | what it is |
+|---|---|
+| `party.md` | the build: abilities, every slot, spells |
+| `party.json` | the same, for a skill to read |
+| `pool.md` | everything the party carries and nobody wears |
+| `items_all.csv` | one row per item, with its slot when it is worn |
+
+The ECS blob is not a separate file: it is one ScratchBuffer attribute named
+`NewAge` inside `Globals.lsf`, and the reader pulls it out itself. Saves come out
+of Steam Cloud (`store.steampowered.com/account/remotestorage`).
+
 ## Layout
 
 | path | what it is |
 |---|---|
 | `src/lspk.py` | unpacks `.lsv` (LSPK v18, zstd) |
-| `src/lsf.py` | reads LSF v7 (`Globals.lsf`, `SaveInfo.json` neighbours) |
-| `src/blob.py` | reads the `NewAge` ECS blob (magic `LSMF`) |
-| `src/extract_items.py` | per-character inventory, worn versus stowed |
-| `src/names.csv` | stat id to English and Russian name, 1221 rows |
+| `src/lsf.py` | reads LSF v7 and lifts a ScratchBuffer out of it |
+| `src/blob.py` | the `NewAge` ECS blob (magic `LSMF`): components, entities, pointers |
+| `src/party.py` | the game side: party, slots, spells, shared pool |
+| `src/read_save.py` | the driver and the reports |
+| `src/names.csv` | stat id to English and Russian name |
 | `tests/fixture.py` | builds a miniature LSMF blob with a known layout |
 | `tests/test_blob.py` | pins the reader against that blob |
 
@@ -35,25 +63,18 @@ The unit tests use a generated blob instead. Its layout is planted by
 `tests/fixture.py`, so a test can check what came back against what went in, and
 the cases are the mistakes actually made while reversing the format - an element
 of skew, a mis-sized entity table, an index array claimed by the wrong
-component.
-
-To run the integration stage, put a save's extracted files where the script
-looks:
-
-```
-BG3_SAVE_DIR=/path/to/saves ./scripts/verify.sh
-```
-
-That directory needs `newage.bin` and an `extracted/` holding `Globals.lsf` and
-`SaveInfo.json`. Saves come out of Steam Cloud
-(`store.steampowered.com/account/remotestorage`); `src/lspk.py` unpacks the
-`.lsv`.
+component, a pointer read without its bias.
 
 ## What the reader can and cannot do
 
-Owner and worn-versus-stowed are read out of the ECS blob, not guessed from
-distance. Known gaps, with the evidence for each, are in `.agent/findings.md`,
-which is not committed. The short version: the equipment slot number (helmet,
-ring 1, ring 2) has not been located, spells are not where `LearnedSpells`
-suggests, and four of the thirty-six index-array segments are placed by a guess
-that `Blob.ambiguous` now reports instead of hiding.
+Party, slots and spells are read out of the blob. `Globals.lsf` supplies exactly
+two things: an item's stat id, which the blob never spells out, and the
+coordinates that tie a character to their `SaveInfo.json` record, which is where
+the class and race labels come from. Without `SaveInfo.json` everything still
+comes out, with the class column blank.
+
+Known gaps, with the evidence for each, are in `.agent/findings.md`, which is not
+committed. The short version: the mods' items have no names anywhere; the class
+and subclass in the blob are GUIDs that have not been mapped to names; and four
+of the thirty-six index-array segments are placed by a guess that
+`Blob.ambiguous` reports instead of hiding.

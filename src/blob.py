@@ -9,12 +9,17 @@ Globals.lsf and SaveInfo.json:
     names                component name table, concatenated, no separators
     names+len .. EOF     component index, one 48 byte record per component
 
-Every `ptr` in the component index is 48 bytes lower than the data it names, so
-element k of a component lives at ptr + 48 + k * elem and `cnt` is the exact
-element count.  The bias is uniform, not a per-array header: consecutive blocks
-sit at ptr + cnt * elem (measured on 321 of 355 neighbouring pairs, the rest
-separated only by padding to an 8 byte boundary), and the last block ends where
-the index region begins.
+Every pointer in the file is 48 bytes lower than the byte it names.  That holds
+for `ptr` in the component index, so element k of a component lives at
+ptr + 48 + k * elem and `cnt` is the exact element count; and it holds just the
+same for a pointer stored inside a record, which is why `deref` and `entity`
+exist and why nothing here carries a per-component fudge factor.  The bias is
+uniform, not a per-array header: consecutive blocks sit at ptr + cnt * elem
+(measured on 321 of 355 neighbouring pairs, the rest separated only by padding
+to an 8 byte boundary), and the last block ends where the index region begins.
+
+The one component that does not obey it is game.stats.v0.ClassesComponent,
+which needs a further +80 that has never been explained.
 """
 
 import re
@@ -22,12 +27,15 @@ import struct
 
 REC = 48
 TAG = 0x6b
+BIAS = 48
 
 
 class Blob:
-    def __init__(self, path):
-        with open(path, 'rb') as fh:
-            self.d = d = fh.read()
+    def __init__(self, path=None, data=None):
+        if data is None:
+            with open(path, 'rb') as fh:
+                data = fh.read()
+        self.d = d = data
         assert d[:4] == b'LSMF', 'not an LSMF blob'
         self.version = struct.unpack_from('<4B', d, 4)
         self._read_index()
@@ -69,7 +77,7 @@ class Blob:
 
     def _read_entities(self):
         e = self.comps['core.v0.EntityId']
-        self.ent_at = e['ptr'] + 48
+        self.ent_at = e['ptr'] + BIAS
         self.nent = e['cnt']
         self.data_end = max(c['ptr'] + c['cnt'] * c['elem'] for c in self.comps.values())
         self.index_at = self.data_end + 48
@@ -96,21 +104,42 @@ class Blob:
 
     def at(self, name, k=0):
         c = self.comps[name]
-        return c['ptr'] + 48 + k * c['elem']
+        return c['ptr'] + BIAS + k * c['elem']
+
+    def elem(self, name, k, fmt):
+        """Element k of `name` unpacked with `fmt`."""
+        return struct.unpack_from(fmt, self.d, self.at(name, k))
+
+    def deref(self, p):
+        """File offset named by a pointer stored inside a record."""
+        return p + BIAS
 
     def rows(self, name, fmt):
         """Unpack every element of `name` with struct format `fmt`."""
         c = self.comps[name]
         assert struct.calcsize(fmt) == c['elem'], (fmt, c['elem'])
-        base = c['ptr'] + 48
+        base = c['ptr'] + BIAS
         return [struct.unpack_from(fmt, self.d, base + k * c['elem'])
                 for k in range(c['cnt'])]
 
-    def ent_of_ptr(self, p):
-        """Entity index for a pointer into the core.v0.EntityId array."""
-        off = p - self.ent_at
-        assert off >= 0 and off % 16 == 0, p
-        return off // 16
+    def pool(self, p, n, fmt):
+        """`n` records of `fmt` from a pointer stored inside a record."""
+        sz = struct.calcsize(fmt)
+        a = self.deref(p)
+        return [struct.unpack_from(fmt, self.d, a + k * sz) for k in range(n)]
+
+    def entity(self, p):
+        """Canonical entity index a stored pointer names, or None.
+
+        Every reference between components is a pointer into core.v0.EntityId,
+        biased like every other pointer, and lands on a slot that has to be
+        folded onto the first slot carrying the same GUID.
+        """
+        off = self.deref(p) - self.ent_at
+        if off < 0 or off % 16:
+            return None
+        i = off // 16
+        return self.canon[i] if i < self.nent else None
 
     # --- entity index arrays ---------------------------------------------
 
@@ -223,35 +252,11 @@ class Blob:
         cnt = self.comps[name]['cnt']
         return struct.unpack_from('<%dI' % cnt, self.d, off)
 
-    def candidates(self, name):
-        """Every maximal increasing run whose length matches `name`'s count."""
-        if self._runs is None:
-            self._build_runs()
-            self._runs = True
-        cnt = self.comps[name]['cnt']
-        return [self._arr[i:i + cnt] for i in self._starts.get(cnt, ())]
+    def positions(self, name):
+        """Canonical entity index -> position of its element in `name`.
 
-    def entity_list(self, name, valid=None):
-        """Entity indices that carry component `name`.
-
-        Legacy fallback for `entities`: scans the index region for a strictly
-        increasing run of exactly `cnt` values; `valid` picks between candidates
-        when several runs have the right length.
+        Indexing a component by the entity index itself only works when the
+        index array happens to be the identity, which is true of
+        StatsComponent and of nothing else.
         """
-        if self._runs is None:
-            self._build_runs()
-            self._runs = True
-        cnt = self.comps[name]['cnt']
-        best, score = None, -1
-        for i in self._starts.get(cnt, ()):
-            v = self._arr[i:i + cnt]
-            if valid is None:
-                return v
-            s = sum(1 for x in v if valid(x))
-            if s > score:
-                best, score = v, s
-            if score == cnt:
-                break
-        if best is None:
-            raise LookupError('no index array of length %d for %s' % (cnt, name))
-        return best
+        return {self.canon[e]: k for k, e in enumerate(self.entities(name))}

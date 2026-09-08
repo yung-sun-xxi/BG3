@@ -53,28 +53,6 @@ ARM_Boots_Leather_F,Heavy Boots,Тяжелые сапоги
 ARM_Boots_Metal,Metallic Boots,Металлические сапоги
 ARM_Boots_Metal_Githyanki,Githyanki Boots,Сапоги гитьянки
 ARM_Breastplate_Body,+1 Breastplate,Нагрудник +1 (Обычный)
-ARM_Camp_Body,Homely Clothes,Домашняя одежда
-ARM_Camp_Body_Astarion,Astarion's Eccentric Clothes,
-ARM_Camp_Body_Gale,Gale's Austere Clothes,
-ARM_Camp_Body_Halsin,Halsin's Grove Garments,
-ARM_Camp_Body_Jaheira,Jaheira's Respectable Clothes,
-ARM_Camp_Body_Karlach,Karlach's Infernal Trousers,Дьявольские штаны Карлах
-ARM_Camp_Body_Minsc,Minsc's Fantastical Relaxation Garb,
-ARM_Camp_Body_Minthara,Minthara's At-Ease Clothes,
-ARM_Camp_Body_Shadowheart,Shadowheart's Clothes,
-ARM_Camp_Body_Wyll,Wyll's Earthy Garb,
-ARM_Camp_Shoes,Metallic Boots,Металлические сапоги
-ARM_Camp_Shoes_Astarion,Tasteful Boots,Стильные сапоги
-ARM_Camp_Shoes_F,Pointed-Toe Shoes,
-ARM_Camp_Shoes_Gale,Tasteful Boots,Стильные сапоги
-ARM_Camp_Shoes_Halsin,Tasteful Boots,Стильные сапоги
-ARM_Camp_Shoes_Jaheira,Tasteful Boots,Стильные сапоги
-ARM_Camp_Shoes_Karlach,Tasteful Boots,Стильные сапоги
-ARM_Camp_Shoes_Laezel,Tasteful Boots,Стильные сапоги
-ARM_Camp_Shoes_Minsc,Tasteful Boots,Стильные сапоги
-ARM_Camp_Shoes_Minthara,Tasteful Boots,Стильные сапоги
-ARM_Camp_Shoes_Shadowheart,Tasteful Boots,Стильные сапоги
-ARM_Camp_Shoes_Wyll,Tasteful Boots,Стильные сапоги
 ARM_ChainMail_Body_1,Chain Mail +1,Кольчужный доспех +1
 ARM_ChainShirt_Body,Chain Shirt,Кольчужная рубаха
 ARM_ChainShirt_Body_1,Chain Shirt +1,Кольчужная рубаха +1
@@ -155,79 +133,6 @@ ARM_Shoes_Monk,Monastic Boots,Монашеские башмаки
 ARM_StuddedLeather_Body_2,Studded Leather Armour +2,Клепаный кожаный доспех +2
 ARM_StuddedLeather_Body_Drow,Drow Studded Leather Armour,Клепаный кожаный доспех дроу
 ARM_TalismanOfJergal,The Amulet of Lost Voices,Амулет заблудших голосов
-ARM_Underwear,Underwear/Base Armour,
-ARM_Underwear_Dragonborn,Underwear/Dragonborn,
-ARM_Underwear_Dragonborn_Bronze,Underwear/Dragonborn,
-ARM_Underwear_HalfOrcs,Underwear/Half-Orc,
-ARM_Underwear_HalfOrcs_Orange,Underwear/Half-Orc,
-ARM_Underwear_Helper,Underwear/Helper,
-ARM_Underwear_Incubus,Underwear/Incubus,
-ARM_Vanity_Body_Aristocrat,Sweetly Tailored Outfit,
-ARM_Vanity_Body_Aristocrat_Brown,Chocolatier Style Doublet,
-ARM_Vanity_Body_Aristocrat_White,Winter Gala Doublet,
-ARM_Vanity_Body_Citizen,Comfortable Blue-Red Outfit,
-ARM_Vanity_Body_Citizen_B,Spring Slimfit Outfit,
-ARM_Vanity_Body_Citizen_B_Teal,Teal Slimfit Outfit,
-ARM_Vanity_Body_Citizen_Black,Comfortable Ashmeadow Outfit,
-ARM_Vanity_Body_Citizen_C,Swarthy Wayfarer in Cream,
-ARM_Vanity_Body_Citizen_C_Blue,Swarthy Wayfarer in Blue,
-ARM_Vanity_Body_Citizen_C_Green,Swarthy Wayfarer in Green,
-ARM_Vanity_Body_Citizen_C_Red,Swarthy Wayfarer in Red,
-ARM_Vanity_Body_Citizen_Purple,Comfortable Autumnal Outfit,
-ARM_Vanity_Body_Cultist,Absolute Outfit,
-ARM_Vanity_Body_Deva,Angelic Scion Outfit,
-ARM_Vanity_Body_Drow,Drow Outfit,
-ARM_Vanity_Body_Leather,Leathery Garb,
-ARM_Vanity_Body_Leather_Black,Black Flare Leather Outfit,
-ARM_Vanity_Body_Leather_Bright,Bright Flare Leather Outfit,
-ARM_Vanity_Body_Leather_Rich,Strapped Choker Leather Ensemble,
-ARM_Vanity_Body_Leather_Rich_Blue,Blue Flare Leather Outfit,
-ARM_Vanity_Body_Leather_Rich_Green,Green Flare Leather Outfit,
-ARM_Vanity_Body_Pants,Umber Trousers,
-ARM_Vanity_Body_Patriars,Magnificently Realised Ensemble,
-ARM_Vanity_Body_Patriars_Black,Eminent Obsidian Outfit,
-ARM_Vanity_Body_Patriars_Blue,Opalescent Outfit,
-ARM_Vanity_Body_Patriars_Green,Eminent Emerald Outfit,
-ARM_Vanity_Body_Patriars_Red,City of Brass Outfit,
-ARM_Vanity_Body_Refugee,Rustic Dark Outfit,
-ARM_Vanity_Body_Refugee_Gray,Road-Dust Grey Clothes,
-ARM_Vanity_Body_Refugee_Green,Scruffy Vagabond Clothes,
-ARM_Vanity_Body_Rich,Splendid Outfit,
-ARM_Vanity_Body_Rich_B,Delicately Constructed Outfit,
-ARM_Vanity_Body_Rich_B1,Fastidiously Perfect Outfit,
-ARM_Vanity_Body_Rich_B1_Beige,Splendid Beige Outfit,
-ARM_Vanity_Body_Rich_B_Purple,Splendid Purple Outfit,
-ARM_Vanity_Body_Rich_C,Chandelier-Style Embroidered Ensemble,
-ARM_Vanity_Body_Rich_C_Blue,Splendid Blue Outfit,
-ARM_Vanity_Body_Rich_C_Red,Splendid Red Outfit,
-ARM_Vanity_Body_Rich_D,Backless Extravaganza,
-ARM_Vanity_Body_Rich_D_Blue,Anarchic Blue Outfit,
-ARM_Vanity_Body_Rich_D_Puple,Anarchic Purple Outfit,
-ARM_Vanity_Body_Rich_D_White,Anarchic White Outfit,
-ARM_Vanity_Body_Rich_E,Lionheart Outfit,
-ARM_Vanity_Body_Rich_E_GreenPink,Lionheart Green-Pink Outfit,
-ARM_Vanity_Body_Rich_E_Teal,Lionheart Teal Outfit,
-ARM_Vanity_Body_Rich_F,Diamond Pattern Garb,
-ARM_Vanity_Body_Rich_F_Blue,Diamond Blue Doublet,
-ARM_Vanity_Body_Rich_G,Raffish Garb,
-ARM_Vanity_Body_Rich_G2,Solemnity Outfit,
-ARM_Vanity_Body_Rich_G2_Blue,Solemnity Outfit in Blue,
-ARM_Vanity_Body_Rich_G2_Green,Solemnity Outfit in Green,
-ARM_Vanity_Body_Rich_G2_Purple,Solemnity Outfit in Purple,
-ARM_Vanity_Body_Rich_G2_White,Solemnity Outfit in Gold Medallions,
-ARM_Vanity_Body_Rich_G_Black,Raffish Midnight Outfit,
-ARM_Vanity_Body_Rich_G_Bright,Raffish Metallic-Shaded Outfit,
-ARM_Vanity_Body_Rich_G_Brown,Raffish Chestnut Outfit,
-ARM_Vanity_Body_Rich_G_Red,Raffish Bronze-Red Outfit,
-ARM_Vanity_Body_Rich_Gold,Splendid Gold Outfit,
-ARM_Vanity_Body_Rich_Green,Splendid Green Outfit,
-ARM_Vanity_Body_Rich_Teal,Splendid Teal Outfit,
-ARM_Vanity_Body_Shirt_Black,Mellow Black Shirt,
-ARM_Vanity_Body_Shirt_Blue,Cosy Blue Shirt,
-ARM_Vanity_Body_Shirt_Green,Snugglesome Green Shirt,
-ARM_Vanity_Body_Shirt_Purple,Snug Purple Shirt,
-ARM_Vanity_Body_Shirt_Red,Comfortable Red Shirt,
-ARM_Vanity_ElegantRobe,Elegant Robe,
 BOOK_GEN_World_TalesOfTheHells,Tales Of The Hells,
 BOOK_GLO_GeneralLoreBook_MoradinTheSoulForger,The Soul Forger,
 BOOK_GLO_GeneralLoreBook_TheLadyOfLuck,"Tymora, Lady Luck",

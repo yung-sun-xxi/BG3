@@ -12,7 +12,7 @@ PY=${PY:-python3}
 [ -x .agent/venv/bin/python ] && PY=.agent/venv/bin/python
 
 SAVES=${BG3_SAVE_DIR:-.agent/saves}
-EXPECT='персонажей=4 предметов_в_контейнерах=2351 у_партии=549 надето=52'
+EXPECT='персонажей=4 надето=52 в_пуле=497 заклинаний=95/28/293/30'
 fail=0
 
 echo "== unit tests =="
@@ -21,10 +21,10 @@ echo "== unit tests =="
 
 echo
 echo "== integration: real save =="
-if [ ! -f "$SAVES/newage.bin" ]; then
-    echo "SKIPPED: no $SAVES/newage.bin (saves are never committed)"
+if [ ! -f "$SAVES/extracted/Globals.lsf" ] && [ ! -f "$SAVES/Globals.lsf" ]; then
+    echo "SKIPPED: no Globals.lsf under $SAVES (saves are never committed)"
 else
-    got=$("$PY" src/extract_items.py 2>&1 | tail -1)
+    got=$("$PY" src/read_save.py "$SAVES" 2>&1 | tail -1)
     echo "$got"
     if [ "$got" = "$EXPECT" ]; then
         echo "control line matches"
