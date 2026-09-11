@@ -294,20 +294,46 @@ class Character:
                 for s in GEAR]
 
 
+def literal_flag(b):
+    """The flag value that marks a string record as a literal in this save.
+
+    Records in display_names and in SpellBookPrepares alternate: a localisation
+    handle flagged 0, then a literal flagged with one save-wide number.  That
+    number is not a constant - QuickSave_418 used 514 and QuickSave_430 uses
+    675 - so it is read off the file: the only non-zero flag display_names
+    carries.  Cached on the blob, because every character asks for it.
+    """
+    got = getattr(b, '_literal_flag', None)
+    if got is not None:
+        return got
+    seen = collections.Counter()
+    for e, k in b.positions(NAMES).items():
+        beg, end = b.elem(NAMES, k, '<2Q' + 'x' * (b.comps[NAMES]['elem'] - 16))[:2]
+        for _, _, fl in b.pool(beg, max(0, (end - beg) // 16), '<QII'):
+            if fl:
+                seen[fl] += 1
+    if not seen:
+        raise ValueError('display_names carries no non-zero string flag')
+    b._literal_flag = seen.most_common(1)[0][0]
+    return b._literal_flag
+
+
 def display_name(b, e, pos=None):
     """Player-facing name of an entity, or None when it has no custom one.
 
     The component holds a span of 16 byte records - string pointer, length,
-    flags - and only the records flagged 514 carry a literal.  The rest are
-    localisation handles, which need files this reader does not have.
+    flags - and only the records carrying the save's literal flag hold a
+    literal.  The rest are localisation handles, which need files this reader
+    does not have.  The flag is per save, not a constant: see `literal_flag`.
     """
     pos = pos if pos is not None else b.positions(NAMES)
     if e not in pos:
         return None
+    lit = literal_flag(b)
     beg, end = b.elem(NAMES, pos[e], '<2Q' + 'x' * (b.comps[NAMES]['elem'] - 16))[:2]
     got = None
     for p, ln, fl in b.pool(beg, max(0, (end - beg) // 16), '<QII'):
-        if fl != 514 or ln == 0 or ln > 200:
+        if fl != lit or ln == 0 or ln > 200:
             continue
         try:
             got = b.d[b.deref(p):b.deref(p) + ln].decode('utf-8')
@@ -503,18 +529,19 @@ def prepared_of(b, e, pos=None):
 
     SpellBookPrepares holds five (begin, end) pairs; only the first carries
     anything here.  It spans MetaId, 24 bytes a record - string pointer,
-    length, flag - and only records flagged 514 with a length in (0, 200]
-    decode to a literal, the same filter display_name uses.  This is a subset
-    of what spells_of returns, not a separate vocabulary.
+    length, flag - and only records carrying the save's literal flag with a
+    length in (0, 200] decode to a literal, the same filter display_name uses.
+    This is a subset of what spells_of returns, not a separate vocabulary.
     """
     pos = pos if pos is not None else b.positions(PREPARES)
     if e not in pos:
         return []
+    lit = literal_flag(b)
     beg, end = b.elem(PREPARES, pos[e],
                        '<2Q' + 'x' * (b.comps[PREPARES]['elem'] - 16))[:2]
     out = []
     for p, ln, fl in b.pool(beg, max(0, (end - beg) // META_REC), '<QII8x'):
-        if fl != 514 or ln == 0 or ln > 200:
+        if fl != lit or ln == 0 or ln > 200:
             continue
         try:
             out.append(b.d[b.deref(p):b.deref(p) + ln].decode('utf-8'))

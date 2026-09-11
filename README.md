@@ -19,7 +19,26 @@ ownership that changes a decision is what is on someone.
 That is the whole recipe; nothing else in the repository repeats it. It runs the
 unit tests always, and the real extraction only when a save is present.
 
-## Reading a save
+## New save, in three steps
+
+1. Steam Cloud, `store.steampowered.com/account/remotestorage`, Baldur's Gate 3
+   (appid 1086940). The list is paged, 50 rows a page, with no page links:
+   `remotestorageapp/?appid=1086940&index=0`, `&index=50`, `&index=100`.
+   Take the newest `.lsv` by date; its "Download" link points at
+   `cdn.steamusercontent.com/filedownload/<id>` and needs no login.
+2. ```
+   scripts/update_party.sh path/to/QuickSave_430.lsv
+   ```
+   moves the file under `.agent/saves/<name>/`, reads it, and copies the three
+   reports into `current/`.
+3. `git diff current/` is the change since the last save: level, class, feats,
+   what is worn, what the pool gained.
+
+`current/` is committed, so the `bg3` skill always reads the same three files
+and the history of the party's builds is the history of that directory. The
+`.lsv` itself is never committed.
+
+## Reading a save by hand
 
 ```
 python src/read_save.py path/to/QuickSave_418.lsv
@@ -34,12 +53,29 @@ falls back to `BG3_SAVE_DIR`, then to `.agent/saves`. Output goes to
 |---|---|
 | `party.md` | the build: class, feats, abilities, every slot, prepared spells, the whole book |
 | `party.json` | the same, for a skill to read |
-| `pool.md` | everything the party carries and nobody wears |
+| `pool.md` | the gear the party carries and nobody wears, by slot family |
 | `items_all.csv` | one row per item, with its slot when it is worn |
 
 The ECS blob is not a separate file: it is one ScratchBuffer attribute named
 `NewAge` inside `Globals.lsf`, and the reader pulls it out itself. Saves come out
 of Steam Cloud (`store.steampowered.com/account/remotestorage`).
+
+## What counts as gear
+
+The save does not say whether an item can be worn: there is no component for
+it, and a bag item carries nothing but its stat id. So the answer is a table,
+`src/gear.csv`, one row per stat id with `gear` = `yes`, `no` or `?`, and the
+reader grows it on every save:
+
+- worn in a combat slot by anyone in the save, party or not, is proof: `yes`;
+- a stat id whose prefix (`WPN_`, `ARM_`, `MAG_`, `UNI_`) and last word
+  (`_Gloves`, `_Amulet`, `_Longsword`) both say gear is taken as `yes`;
+- only one of the two, and nobody seen wearing it, is a `?` for the owner to
+  settle once — they are listed at the end of `pool.md`;
+- a `yes` or `no` written by hand is never overwritten.
+
+Potions, scrolls, food, quest objects, camp clothes and underwear are not gear
+and never appear in the pool. A row's `source` says how it got there.
 
 ## Layout
 
@@ -50,10 +86,24 @@ of Steam Cloud (`store.steampowered.com/account/remotestorage`).
 | `src/blob.py` | the `NewAge` ECS blob (magic `LSMF`): components, entities, pointers |
 | `src/party.py` | the game side: party, slots, spells, shared pool |
 | `src/read_save.py` | the driver and the reports |
+| `src/gear.py` | what counts as gear, and how `gear.csv` grows |
+| `src/gear.csv` | every stat id ever seen as gear, with the evidence |
 | `src/names.csv` | stat id to English and Russian name |
+| `scripts/update_party.sh` | one save in, `current/` out |
+| `current/` | the party as of the last save: `party.md`, `party.json`, `pool.md` |
 | `tests/fixture.py` | builds a miniature LSMF blob with a known layout |
 | `tests/test_blob.py` | pins the reader against that blob |
 | `tests/test_party.py` | pins the GUID text form and the name tables |
+| `tests/test_gear.py` | pins the gear rules and the promise that hand-written rows stay |
+
+## Two numbers that change from save to save
+
+Every record in the blob's component index carries one u32 at offset 12, and
+every string record in `display_names` and `SpellBookPrepares` carries one
+flag. Both are the same across a save and different between saves:
+QuickSave_418 has `0x6b` and 514, QuickSave_430 has `0xa3` and 675. Neither is
+hard-coded any more; both are read off the file. When a new save fails, check
+these two before suspecting a layout.
 
 ## Two things the save does not say
 

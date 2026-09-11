@@ -28,7 +28,6 @@ import re
 import struct
 
 REC = 48
-TAG = 0x6b
 BIAS = 48
 
 
@@ -52,8 +51,13 @@ class Blob:
     def _read_index(self):
         d = self.d
         n = len(d)
+        # Every index record carries the same u32 at offset 12 - a per-save
+        # revision, not a constant: QuickSave_418 stored 0x6b and QuickSave_430
+        # stores 0xa3.  Take it from the last record and count back while it
+        # holds; the name-table check below is what actually validates the run.
+        tag = struct.unpack_from('<I', d, n - REC + 12)[0]
         count = 0
-        while struct.unpack_from('<I', d, n - (count + 1) * REC + 12)[0] == TAG:
+        while struct.unpack_from('<I', d, n - (count + 1) * REC + 12)[0] == tag:
             count += 1
         start = n - count * REC
         raw = []
