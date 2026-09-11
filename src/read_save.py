@@ -11,11 +11,14 @@ Four files come out, into `BG3_OUT_DIR` or beside the save:
 
     party.md      the build: abilities, feats, every equipment slot, spells
     party.json    the same, for the bg3 skill to read instead of a screenshot
-    pool.md       everything the party carries and nobody wears
+    pool.md       the gear the party carries and nobody wears
     items_all.csv one row per item, with its slot when it is worn
 
 Who carries an unworn item is deliberately not reported.  In play the party's
 bags are one pot, so the only ownership that matters is what is on someone.
+Only gear is reported at all: weapons, armour and accessories that can be
+worn.  Potions, scrolls, food and quest objects are dropped, and what counts
+as gear is the list in `gear.csv`, which this script grows - see gear.py.
 """
 
 import collections
@@ -26,14 +29,12 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+import gear
 import lspk
 import party
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DEFAULT = os.environ.get('BG3_SAVE_DIR', os.path.join(HERE, '..', '.agent', 'saves'))
-
-GROUPS = [('Магические (MAG_)', 'MAG_'), ('Уникальные (UNI_)', 'UNI_'),
-          ('Оружие (WPN_)', 'WPN_'), ('Броня (ARM_)', 'ARM_')]
 
 NAMES = {}
 with open(os.path.join(HERE, 'names.csv')) as fh:
@@ -114,27 +115,49 @@ def party_md(chars, info):
     return '\n'.join(L) + '\n'
 
 
-def pool_md(pool):
-    L = ['# Общий пул партии\n',
-         'Всё, что партия несёт и никто не носит: %d предметов, %d наименований.\n'
-         % (sum(pool.values()), len(pool)),
+def pool_md(pool, known):
+    """The shared pool, gear only, grouped by slot family.
+
+    `known` is the gear table.  Rows marked `?` go into their own section for
+    the owner to check once; rows marked `no` and stat ids the table does not
+    hold are not gear and do not appear.
+    """
+    yes = {s: n for s, n in pool.items() if known.get(s, {}).get('gear') == 'yes'}
+    ask = {s: n for s, n in pool.items() if known.get(s, {}).get('gear') == '?'}
+    L = ['# Общий пул снаряжения\n',
+         'Оружие, броня и аксессуары, которые партия несёт и никто не носит: '
+         '%d предметов, %d наименований. Зелья, свитки, еда и квестовые вещи '
+         'не показаны.\n' % (sum(yes.values()), len(yes)),
          'У кого именно в сумке — не отслеживается: в игре это один котёл.\n']
-    rest = collections.Counter()
-    for title, pref in GROUPS:
-        g = sorted(s for s in pool if s.startswith(pref))
+    for kind in gear.KIND_ORDER:
+        g = sorted(s for s in yes if known[s]['kind'] == kind)
         if not g:
             continue
-        L.append('## %s\n' % title)
+        L.append('## %s\n' % gear.KIND_RU[kind])
         for s in g:
-            L.append('- %s%s' % (name_of(s), ' ×%d' % pool[s] if pool[s] > 1 else ''))
+            L.append('- %s%s' % (name_of(s), ' ×%d' % yes[s] if yes[s] > 1 else ''))
         L.append('')
-    for s, n in pool.items():
-        if not s.startswith(tuple(p for _, p in GROUPS)):
-            rest[s.split('_')[0]] += n
-    if rest:
-        L.append('## Расходники и прочее\n')
-        L.append(', '.join('%s ×%d' % kv for kv in rest.most_common()))
+    if ask:
+        L.append('## Не проверено (%d)\n' % len(ask))
+        L.append('Похожи на снаряжение по stat id, но никто в сейве их не носил. '
+                 'Проверить один раз и проставить `yes` или `no` в `src/gear.csv`.\n')
+        for s in sorted(ask):
+            L.append('- %s — `%s`, похоже на %s'
+                     % (name_of(s), s, gear.KIND_RU[known[s]['kind']].lower()))
+        L.append('')
     return '\n'.join(L) + '\n'
+
+
+def world_worn(save, b):
+    """{stat id: slot} over every combat slot anyone in the save has filled."""
+    out = {}
+    cpos = b.positions(party.CONTAINER)
+    for e, c in party.container_of(b).items():
+        for slot, item in party.slots_of(b, c, cpos).items():
+            sid = save.stats.get(item, '')
+            if sid and slot in gear.SLOT_KIND:
+                out.setdefault(sid, slot)
+    return out
 
 
 def main(argv):
@@ -144,14 +167,23 @@ def main(argv):
     chars, pool = party.read(save, info)
     out = os.environ.get('BG3_OUT_DIR', save.dir)
 
+    known = gear.load()
+    learned = gear.learn(known, world_worn(save, save.blob), pool,
+                         (info or {}).get('Save Name', '?'))
+    if learned:
+        gear.save(known)
+    is_gear = lambda s: known.get(s, {}).get('gear') == 'yes'
+    unsure = sorted(s for s in pool if known.get(s, {}).get('gear') == '?')
+
     with open(os.path.join(out, 'party.md'), 'w') as fh:
         fh.write(party_md(chars, info))
     with open(os.path.join(out, 'pool.md'), 'w') as fh:
-        fh.write(pool_md(pool))
+        fh.write(pool_md(pool, known))
 
     doc = dict(save=(info or {}).get('Save Name', ''),
                level=(info or {}).get('Current Level', ''),
-               pool={s: n for s, n in pool.most_common()},
+               pool={s: n for s, n in pool.most_common() if is_gear(s)},
+               pool_unchecked=unsure,
                characters=[dict(
                    name=c.name, entity=c.entity, level=c.level, cls=c.cls,
                    sub=c.sub, race=c.race, classes=c.classes, feats=c.feats,
@@ -180,11 +212,15 @@ def main(argv):
             w.writerow([sid, ru, en, e, hold[e], c.name if c else '',
                         party.SLOTS.get(n, '') if c else ''])
 
-    print('персонажей=%d надето=%d в_пуле=%d заклинаний=%s подготовлено=%s черт=%s'
-          % (len(chars), sum(len(c.worn) for c in chars), sum(pool.values()),
+    print('персонажей=%d надето=%d снаряжения_в_пуле=%d не_проверено=%d '
+          'заклинаний=%s подготовлено=%s черт=%s'
+          % (len(chars), sum(len(c.worn) for c in chars),
+             sum(n for s, n in pool.items() if is_gear(s)), len(unsure),
              '/'.join(str(len(c.spells)) for c in chars),
              '/'.join(str(len(c.prepared)) for c in chars),
              '/'.join(str(len(c.feats)) for c in chars)))
+    if learned:
+        print('gear.csv: %d новых строк' % len(learned))
 
 
 if __name__ == '__main__':
