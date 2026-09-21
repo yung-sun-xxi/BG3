@@ -51,7 +51,7 @@ falls back to `BG3_SAVE_DIR`, then to `.agent/saves`. Output goes to
 
 | file | what it is |
 |---|---|
-| `party.md` | the build: class, feats, abilities, every slot, prepared spells, the whole book |
+| `party.md` | the build: class, feats, abilities, every slot, prepared spells, the whole book, what was picked at each level (spells, cantrips, metamagic, swaps), and the spell save DC with its terms |
 | `party.json` | the same, for a skill to read |
 | `pool.md` | the gear the party carries and nobody wears, by slot family |
 | `items_all.csv` | one row per item, with its slot when it is worn |
