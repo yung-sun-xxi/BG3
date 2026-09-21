@@ -12,10 +12,13 @@ MAG_PHB_PeriaptofWoundClosure_Amulet,amulet,yes,id QuickSave_418
 MAG_Restoration_SpellSlotRestoration_Amulet,amulet,yes,worn QuickSave_418
 MAG_TWN_Surgeon_ParalyzingCritical_Amulet,amulet,yes,worn QuickSave_418
 MAG_Thunder_ReverberationOnRangeSpellDamage_Amulet,amulet,yes,worn QuickSave_418
+QUEST_LOW_Bhaal_Amulet,amulet,yes,worn QuickSave_582
 UNI_GOB_SeluneAmulet,amulet,yes,id QuickSave_418
  Bimbo_SharRobeSundress,body,?,seen QuickSave_418
+ARM_Amulet_Necklace_C_Gold_A,body,?,seen QuickSave_582
 ARM_Breastplate_Body,body,yes,worn QuickSave_418
 ARM_ChainMail_Body,body,yes,worn QuickSave_418
+ARM_ChainShirt_Body,body,yes,worn QuickSave_582
 ARM_HalfPlate_Body,body,yes,worn QuickSave_418
 ARM_HalfPlate_Body_Githyanki,body,yes,worn QuickSave_418
 ARM_Leather_Body,body,yes,worn QuickSave_418
@@ -47,8 +50,11 @@ UNI_Leather_Halsin,body,yes,worn QuickSave_418
 UNI_Leather_Jaheira,body,yes,worn QuickSave_418
 UNI_Ravengard_Plate,body,yes,worn QuickSave_418
 MAG_ElementalGish_AbsorbElements_Cloak,cloak,yes,worn QuickSave_418
+MAG_EndGameCaster_Cloak,cloak,yes,worn QuickSave_582
+MAG_PHB_CloakOfDisplacement_Cloak,cloak,yes,worn QuickSave_582
 MAG_PHB_CloakOfProtection_Cloak,cloak,yes,worn QuickSave_418
 MAG_Poison_InflictPoisonHealSelf_Cloak,cloak,yes,worn QuickSave_418
+ARM_BootsOfDimensionalDoor,feet,yes,worn QuickSave_582
 ARM_BootsOfSpeed,feet,yes,worn QuickSave_418
 ARM_Boots_Leather,feet,yes,worn QuickSave_418
 ARM_Boots_Leather_Druid,feet,yes,worn QuickSave_418
@@ -93,10 +99,13 @@ ARM_Helmet_Metal,head,yes,worn QuickSave_418
 CRE_MAG_Psychic_Githborn_Circlet,head,yes,worn QuickSave_418
 MAG_BonusAttack_AgainstMarked_Circlet,head,yes,worn QuickSave_418
 MAG_ElementalGish_ArcaneAcuity_Helmet,head,yes,id QuickSave_418
+MAG_EndGameCaster_Hood,head,yes,worn QuickSave_582
 MAG_Fire_ArcaneAcuityOnFireDamage_Hat,head,yes,id QuickSave_430
 MAG_Gish_ArcaneSynergy_Circlet,head,yes,id QuickSave_418
+MAG_Hat_Barbarian_Hide,head,yes,worn QuickSave_582
 MAG_Healer_HealSelf_Helmet,head,yes,id QuickSave_418
 MAG_Mobility_MomentumOnCombatStart_Helmet,head,yes,id QuickSave_418
+MAG_Monk_SoulPerception_Hat,head,yes,worn QuickSave_582
 MAG_Myrkulites_CircletOfMyrkul_Circlet,head,yes,id QuickSave_418
 MAG_Radiant_Radiating_Helmet,head,yes,worn QuickSave_418
 UNI_DarkJusticiar_Helmet,head,yes,worn QuickSave_418
@@ -107,6 +116,7 @@ MAG_Frost_GenerateSurfaceOnColdDamage_Ring,ring,yes,worn QuickSave_418
 MAG_Gish_PsychicDamageBonusWhileConcentrating_Ring,ring,yes,worn QuickSave_418
 MAG_Myrkulites_RingofMyrkul_Ring,ring,yes,id QuickSave_418
 MAG_PHB_OfFreeAction_Ring,ring,yes,worn QuickSave_418
+MAG_PHB_OfRegeneration_Ring,ring,yes,worn QuickSave_582
 MAG_PassWithoutTrace_Ring,ring,yes,id QuickSave_418
 MAG_Psychic_MentalOverload_Ring,ring,yes,worn QuickSave_418
 MAG_RiskyAttack_Ring,ring,yes,worn QuickSave_418
@@ -138,7 +148,9 @@ MAG_Gortash_HeavyCrossbow,weapon,yes,worn QuickSave_418
 MAG_GreaterNecromancy_Staff,weapon,yes,worn QuickSave_418
 MAG_GreaterSilver_Greatsword,weapon,yes,worn QuickSave_418
 MAG_HAV_Sylvan_Scimitar,weapon,yes,worn QuickSave_418
+MAG_Harpers_OfWeapons_Quarterstaff,weapon,yes,worn QuickSave_582
 MAG_Hunting_Shortbow,weapon,yes,worn QuickSave_418
+MAG_Justiciar_Scimitar,weapon,yes,worn QuickSave_582
 MAG_Ketheric_Warhammer,weapon,yes,id QuickSave_418
 MAG_LC_CazadorVampiric_Quarterstaff,weapon,yes,worn QuickSave_418
 MAG_LC_Lorroakan_Quarterstaff,weapon,yes,worn QuickSave_418
@@ -149,6 +161,7 @@ MAG_OfAwareness_Bow,weapon,yes,worn QuickSave_418
 MAG_Orthon_Hellfire_HandCrossbow,weapon,yes,worn QuickSave_418
 MAG_PoR_OfVigilance_Halberd,weapon,yes,worn QuickSave_418
 MAG_SHA_SeluneBlessing_Spear,weapon,yes,worn QuickSave_418
+MAG_SWA_Roaring_Maul,weapon,yes,id QuickSave_582
 MAG_StrongString_Longbow,weapon,yes,id QuickSave_418
 MAG_TheWoundSeeker_Greatsword,weapon,yes,worn QuickSave_418
 MAG_Thunder_ThunderClap_Quarterstaff,weapon,yes,id QuickSave_418
@@ -156,6 +169,7 @@ MAG_Viconia_Mace,weapon,yes,worn QuickSave_418
 MAG_WYRM_Commander_Longsword,weapon,yes,worn QuickSave_418
 MAG_WYRM_UndeadBane_GreatAxe,weapon,yes,worn QuickSave_418
 Quest_HAG_HagLair_Staff,weapon,yes,checked 2026-09-11
+Quest_SCL_MoonlanternWithPixie,weapon,yes,worn QuickSave_582
 UND_Nere_Sword,weapon,yes,worn QuickSave_418
 WPN_Club,weapon,yes,worn QuickSave_418
 WPN_Dagger,weapon,yes,worn QuickSave_418
@@ -174,6 +188,7 @@ WPN_Longbow,weapon,yes,worn QuickSave_418
 WPN_Longbow_1,weapon,yes,worn QuickSave_418
 WPN_Longsword,weapon,yes,worn QuickSave_418
 WPN_Longsword_1,weapon,yes,worn QuickSave_418
+WPN_Mace,weapon,yes,worn QuickSave_582
 WPN_MinePickaxe,weapon,yes,worn QuickSave_418
 WPN_Ogre_Club,weapon,yes,worn QuickSave_418
 WPN_Ogre_Greatclub,weapon,yes,worn QuickSave_418
@@ -184,7 +199,7 @@ WPN_Quarterstaff,weapon,yes,worn QuickSave_418
 WPN_Quarterstaff_Druid,weapon,yes,worn QuickSave_418
 WPN_Rapier,weapon,yes,worn QuickSave_418
 WPN_Rapier_1,weapon,yes,worn QuickSave_418
-WPN_Salami,weapon,?,seen QuickSave_418
+WPN_Salami,weapon,yes,worn QuickSave_582
 WPN_Scimitar,weapon,yes,worn QuickSave_418
 WPN_Scimitar_1,weapon,yes,worn QuickSave_418
 WPN_Shortbow,weapon,yes,worn QuickSave_418

@@ -69,5 +69,39 @@ class NameTables(unittest.TestCase):
             self.assertIn(name, party.SUBCLASS_NAMES.values())
 
 
+class SpellDC(unittest.TestCase):
+    """The save holds no DC; the reader derives it and shows the terms."""
+
+    def tav(self):
+        # Tav in QuickSave_582, as the owner read the number off his sheet
+        # on 21 September 2026: 20.
+        c = party.Character(73)
+        c.cls, c.proficiency = 'Sorcerer', 4
+        c.abilities = dict(zip(party.ABILITIES, (10, 16, 14, 8, 8, 18)))
+        c.worn = {0: (1, 'MAG_EndGameCaster_Hood'), 2: (2, 'MAG_EndGameCaster_Cloak'),
+                  10: (3, 'MAG_Gortash_Gloves'), 1: (4, 'MAG_Frost_Robe')}
+        return c
+
+    def test_tavs_sheet_number(self):
+        total, parts = self.tav().spell_dc()
+        self.assertEqual(total, 20)
+        self.assertEqual([v for _, v in parts], [8, 4, 4, 2, 1, 1])
+
+    def test_the_casting_ability_is_the_classes_own(self):
+        c = self.tav()
+        c.cls = 'Wizard'          # ИНТ 8: modifier -1
+        self.assertEqual(c.spell_dc()[0], 8 + 4 - 1 + 4)
+
+    def test_a_class_without_spells_has_no_dc(self):
+        c = self.tav()
+        c.cls = 'Barbarian'
+        self.assertIsNone(c.spell_dc())
+
+    def test_bare_character_without_items(self):
+        c = self.tav()
+        c.worn = {}
+        self.assertEqual(c.spell_dc()[0], 16)
+
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)

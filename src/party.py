@@ -61,6 +61,24 @@ SPELL_DATA = 'game.spell.v3.SpellData'
 PREPARES = 'game.spell.v0.SpellBookPrepares'
 LEVEL = 'game.stats.v0.LevelComponent'
 LEVELUP = 'game.progression.v3.LevelUpComponent'
+# Per-level choices hang off the progression record: see choices_of.
+SELECTOR_SPELLS = 4      # slot of the seven that holds SpellSelector nodes
+SELECTOR_PASSIVES = 5    # ... and PassiveSelector nodes (metamagic lives here)
+
+# Which ability a class casts with; a class missing here has no spell DC.
+CASTING_ABILITY = {
+    'Bard': 'ХАР', 'Paladin': 'ХАР', 'Sorcerer': 'ХАР', 'Warlock': 'ХАР',
+    'Wizard': 'ИНТ', 'Cleric': 'МДР', 'Druid': 'МДР', 'Ranger': 'МДР',
+    'Monk': 'МДР',
+}
+# Worn items that raise the spell save DC, by stat id, as bg3.wiki states
+# them (21 September 2026).  Only items someone in a save has worn are here;
+# a new one is added when it turns up, with its wiki line checked.
+DC_BONUS = {
+    'MAG_EndGameCaster_Hood': 2,     # Hood of the Weave
+    'MAG_EndGameCaster_Cloak': 1,    # Cloak of the Weave
+    'MAG_Gortash_Gloves': 1,         # Gauntlet of the Tyrant
+}
 
 # The uniform +48 pointer bias holds everywhere in this file; nothing here is
 # an exception.  Two record layouts looked like exceptions for a while, until
@@ -272,7 +290,7 @@ class Save:
 class Character:
     __slots__ = ('entity', 'name', 'level', 'cls', 'sub', 'race', 'classes',
                  'abilities', 'proficiency', 'worn', 'spells', 'prepared', 'feats',
-                 'container')
+                 'container', 'choices')
 
     def __init__(self, entity):
         self.entity = entity
@@ -287,11 +305,30 @@ class Character:
         self.spells = []
         self.prepared = []      # names, subset of spells, currently active
         self.container = None
+        self.choices = []       # [{level, spells, replaced, passives}, ...]
 
     def gear(self):
         """(slot number, slot name, entity, stat id) for the build slots only."""
         return [(s, SLOTS[s]) + self.worn.get(s, (None, ''))
                 for s in GEAR]
+
+    def spell_dc(self):
+        """(DC, parts) or None: the save keeps no DC, the game derives it.
+
+        8 + proficiency + casting ability modifier + every worn item DC_BONUS
+        knows.  `parts` lists each term as (label, value) so a report can show
+        the arithmetic instead of a bare number.  A class with no casting
+        ability gets None.
+        """
+        ab = CASTING_ABILITY.get(self.cls)
+        if ab is None or ab not in self.abilities:
+            return None
+        mod = (self.abilities[ab] - 10) // 2
+        parts = [('база', 8), ('мастерство', self.proficiency), (ab, mod)]
+        for s, sid in sorted(self.worn.items()):
+            if sid[1] in DC_BONUS:
+                parts.append((sid[1], DC_BONUS[sid[1]]))
+        return sum(v for _, v in parts), parts
 
 
 def literal_flag(b):
@@ -498,6 +535,78 @@ def feats_of(b, e, pos=None):
     return out
 
 
+def choices_of(b, e, pos=None):
+    """What the player picked at each level: spells, swaps and passives.
+
+    The 96 byte progression record feats_of reads carries, at offset 72, a
+    pointer to a LevelUpComponentSelectors element: seven (begin, end) spans
+    of 8 byte pointers, slot 4 to SpellSelector nodes, slot 5 to
+    PassiveSelector nodes, the lower slots to ability and skill nodes this
+    reader does not decode.  A node is 56 bytes - a pointer, the selector
+    GUID, a span of picks, a span of swaps.  Picks are 16 byte (pointer,
+    length) strings.  A swap is a 32 byte record of two such strings with a
+    u32 flag after each length, old then new; an unused swap slot holds the
+    same record with both lengths 0.
+
+    Metamagic is a passive pick (`Metamagic_Twinned`), cantrips and spells
+    are spell picks, and a cantrip is not told apart from a spell here.
+    Checked on QuickSave_582: Tav's ten levels give exactly the eleven
+    spells and five sorcery cantrips his prepared list holds, once the level
+    9 swap of Magic Missile for Cone of Cold and its re-pick at level 10 are
+    applied, and the four metamagics match ToggledPassivesComponent.
+    """
+    pos = pos if pos is not None else b.positions(LEVELUP)
+    if e not in pos:
+        return []
+    NONE = 2 ** 64 - 1
+    d = b.d
+
+    def text(p, ln):
+        if ln == 0 or ln > 200 or p >= len(d):
+            return None
+        try:
+            return d[b.deref(p):b.deref(p) + ln].decode('utf-8')
+        except UnicodeDecodeError:
+            return None
+
+    def picks(vb, ve):
+        if vb == NONE or ve <= vb or (ve - vb) % 16:
+            return []
+        out = [text(p, ln) for p, ln in b.pool(vb, (ve - vb) // 16, '<QQ')]
+        return [x for x in out if x]
+
+    def swaps(vb, ve):
+        if vb == NONE or ve <= vb or (ve - vb) % 32:
+            return []
+        out = []
+        for p1, n1, _, p2, n2, _ in b.pool(vb, (ve - vb) // 32, '<QIIQII'):
+            a, c = text(p1, n1), text(p2, n2)
+            if a and c:
+                out.append((a, c))
+        return out
+
+    beg, end = b.elem(LEVELUP, pos[e], '<2Q')
+    out = []
+    for k in range(max(0, (end - beg) // LEVELUP_REC)):
+        ptr, = struct.unpack_from('<Q', d, b.deref(beg) + k * LEVELUP_REC)
+        sel, = struct.unpack_from('<Q', d, b.deref(ptr) + 72)
+        lv = dict(level=k + 1, spells=[], replaced=[], passives=[])
+        if sel != NONE:
+            spans = struct.unpack_from('<14Q', d, b.deref(sel))
+            for slot, key in ((SELECTOR_SPELLS, 'spells'),
+                              (SELECTOR_PASSIVES, 'passives')):
+                sb, se = spans[2 * slot], spans[2 * slot + 1]
+                if sb == NONE or se <= sb:
+                    continue
+                for node, in b.pool(sb, (se - sb) // 8, '<Q'):
+                    _, vb, ve, wb, we = struct.unpack_from('<Q16xQQQQ', d, b.deref(node))
+                    lv[key] += picks(vb, ve)
+                    if key == 'spells':
+                        lv['replaced'] += swaps(wb, we)
+        out.append(lv)
+    return out
+
+
 def spells_of(b, e, pos=None):
     """Every spell name in a character's book, common actions included.
 
@@ -524,19 +633,46 @@ def spells_of(b, e, pos=None):
     return out
 
 
+def prepares_flag(b, pos=None):
+    """The literal flag SpellBookPrepares uses in this save.
+
+    Same idea as `literal_flag`, read off a different component: the most
+    common non-zero flag over every character's first span.  QuickSave_582
+    carries 32756 here while display_names carries 455.
+    """
+    got = getattr(b, '_prepares_flag', None)
+    if got is not None:
+        return got
+    pos = pos if pos is not None else b.positions(PREPARES)
+    pad = 'x' * (b.comps[PREPARES]['elem'] - 16)
+    seen = collections.Counter()
+    for k in pos.values():
+        beg, end = b.elem(PREPARES, k, '<2Q' + pad)[:2]
+        for _, _, fl in b.pool(beg, max(0, (end - beg) // META_REC), '<QII8x'):
+            if fl:
+                seen[fl] += 1
+    if not seen:
+        raise ValueError('SpellBookPrepares carries no non-zero string flag')
+    b._prepares_flag = seen.most_common(1)[0][0]
+    return b._prepares_flag
+
+
 def prepared_of(b, e, pos=None):
     """Names in a character's currently prepared/active spells and actions.
 
     SpellBookPrepares holds five (begin, end) pairs; only the first carries
     anything here.  It spans MetaId, 24 bytes a record - string pointer,
-    length, flag - and only records carrying the save's literal flag with a
-    length in (0, 200] decode to a literal, the same filter display_name uses.
+    length, flag - and only records carrying this component's literal flag
+    with a length in (0, 200] decode to a literal, the same filter
+    display_name uses.  That flag is read off SpellBookPrepares itself, not
+    off display_names: the two agreed in QuickSave_418 and 430 and parted in
+    QuickSave_582 (455 against 32756), which emptied every prepared list.
     This is a subset of what spells_of returns, not a separate vocabulary.
     """
     pos = pos if pos is not None else b.positions(PREPARES)
     if e not in pos:
         return []
-    lit = literal_flag(b)
+    lit = prepares_flag(b, pos)
     beg, end = b.elem(PREPARES, pos[e],
                        '<2Q' + 'x' * (b.comps[PREPARES]['elem'] - 16))[:2]
     out = []
@@ -588,6 +724,7 @@ def read(save, info=None):
                 ch.worn[s] = (item, save.stats.get(item, ''))
         ch.spells = spells_of(b, e, spos)
         ch.prepared = prepared_of(b, e, ppos)
+        ch.choices = choices_of(b, e, fpos)
         chars.append(ch)
 
     hold = holders(b)

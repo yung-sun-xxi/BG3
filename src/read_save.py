@@ -57,6 +57,17 @@ def feats_line(c):
     return ', '.join('%s (ур. %d)' % (f['feat'], f['level']) for f in c.feats)
 
 
+def dc_line(c):
+    """`СЛ заклинаний: 20 = 8 + 4 мастерство + ...`, or why there is none."""
+    dc = c.spell_dc()
+    if dc is None:
+        return 'СЛ заклинаний: нет, класс не заклинатель'
+    total, parts = dc
+    return 'СЛ заклинаний: **%d** = %s' % (
+        total, ' + '.join('%d %s' % (v, name_of(k) if k in NAMES else k)
+                          for k, v in parts))
+
+
 def open_save(path):
     """A Save from a .lsv or from a directory, unpacking the .lsv if need be."""
     if os.path.isfile(path) and path.lower().endswith('.lsv'):
@@ -83,8 +94,10 @@ def party_md(chars, info):
                  % (info.get('Current Level'), (info.get('Difficulty') or ['?'])[0],
                     info.get('Game Version')))
     L.append('Всё ниже прочитано из ECS-блоба: состав партии, класс, уровень, '
-             'черты, слоты экипировки, подготовленные заклинания и книга. '
-             'Раса — из `SaveInfo.json`.\n')
+             'черты, слоты экипировки, подготовленные заклинания, книга и '
+             'выборы на каждом уровне. Раса — из `SaveInfo.json`. СЛ заклинаний '
+             'в сейве нет, она считается: 8 + мастерство + модификатор '
+             'заклинательной характеристики + надетое, что её поднимает.\n')
     L.append('Характеристики — итоговые, вместе с надетым. Предмет, который '
              'ставит или поднимает характеристику, уже учтён в числе, и базы '
              'персонажа в сейве нет.\n')
@@ -99,6 +112,7 @@ def party_md(chars, info):
     for c in chars:
         L.append('\n## %s — %s %d\n' % (c.name, c.cls or '?', c.level))
         L.append('Черты: %s\n' % (feats_line(c) or '—'))
+        L.append(dc_line(c) + '\n')
         L.append('| Слот | Предмет |')
         L.append('|---|---|')
         for num, slot, ent, sid in c.gear():
@@ -108,6 +122,18 @@ def party_md(chars, info):
             L.append('\nВне боевых слотов: '
                      + ', '.join('%s — %s' % (party.SLOTS.get(n, n), name_of(s))
                                  for n, (_, s) in extra))
+        picked = [lv for lv in c.choices
+                  if lv['spells'] or lv['replaced'] or lv['passives']]
+        if picked:
+            L.append('\n### Выборы при повышении уровня\n')
+            L.append('| Ур. | Заклинания и фокусы | Заменено | Пассивки |')
+            L.append('|---|---|---|---|')
+            for lv in picked:
+                L.append('| %d | %s | %s | %s |' % (
+                    lv['level'],
+                    ', '.join('`%s`' % x for x in lv['spells']) or '—',
+                    ', '.join('`%s` → `%s`' % ab for ab in lv['replaced']) or '—',
+                    ', '.join('`%s`' % x for x in lv['passives']) or '—'))
         L.append('\n### Подготовлено и активно (%d)\n' % len(c.prepared))
         L.append(', '.join('`%s`' % s for s in sorted(c.prepared)) or '—')
         L.append('\n### Книга заклинаний и действий (%d)\n' % len(c.spells))
@@ -189,6 +215,8 @@ def main(argv):
                    sub=c.sub, race=c.race, classes=c.classes, feats=c.feats,
                    abilities=c.abilities, proficiency=c.proficiency,
                    spells=sorted(c.spells), prepared=sorted(c.prepared),
+                   choices=c.choices,
+                   spell_dc=(c.spell_dc() or (None, []))[0],
                    worn={party.SLOTS.get(n, str(n)): s
                          for n, (_, s) in sorted(c.worn.items())})
                    for c in chars])
@@ -213,12 +241,13 @@ def main(argv):
                         party.SLOTS.get(n, '') if c else ''])
 
     print('персонажей=%d надето=%d снаряжения_в_пуле=%d не_проверено=%d '
-          'заклинаний=%s подготовлено=%s черт=%s'
+          'заклинаний=%s подготовлено=%s черт=%s сл=%s'
           % (len(chars), sum(len(c.worn) for c in chars),
              sum(n for s, n in pool.items() if is_gear(s)), len(unsure),
              '/'.join(str(len(c.spells)) for c in chars),
              '/'.join(str(len(c.prepared)) for c in chars),
-             '/'.join(str(len(c.feats)) for c in chars)))
+             '/'.join(str(len(c.feats)) for c in chars),
+             '/'.join(str((c.spell_dc() or ('-',))[0]) for c in chars)))
     if learned:
         print('gear.csv: %d новых строк' % len(learned))
 
