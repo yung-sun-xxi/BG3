@@ -13,3 +13,6 @@ __pycache__/
 handoff.md
 skill-handoff.md
 todo.md
+
+# macOS Finder metadata.
+.DS_Store
