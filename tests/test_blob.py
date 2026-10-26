@@ -114,5 +114,33 @@ class BlobTest(unittest.TestCase):
         self.assertEqual(self.b.ambiguous, [])
 
 
+class FalseAnchorTest(unittest.TestCase):
+    """QuickSave_691: a component whose array merges into the next one's run
+    has no run of its own length where it lives, so the only run of that length
+    is another component's, far down the region.  Taken as an anchor, it must
+    not push the real anchors after it out of the layout."""
+
+    PLAN = [
+        ('game.t.v0.AComponent', (10, 11, 12, 13)),
+        ('game.t.v0.XComponent', (5, 6)),        # merges with Y into one run of 5
+        ('game.t.v0.YComponent', (7, 8, 9)),
+        ('game.t.v0.BComponent', (0, 1, 2, 3, 4, 5)),
+        ('game.t.v0.ZComponent', (1, 2)),        # the only run of length 2
+    ]
+
+    def test_a_far_false_anchor_does_not_drop_the_real_ones(self):
+        b = object.__new__(blob.Blob)
+        arrays = [a for _, a in self.PLAN]
+        b.d = b''.join(struct.pack('<%dI' % len(a), *a) for a in arrays)
+        b.index_at, b.names_at, b.nent = 0, len(b.d), 20
+        b.order = [n for n, _ in self.PLAN]
+        b.comps = {n: {'cnt': len(a)} for n, a in self.PLAN}
+        b._runs = b._layout = None
+        off = 0
+        for name, arr in self.PLAN:
+            self.assertEqual(b.index_of(name), off, name)
+            off += len(arr) * 4
+
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)

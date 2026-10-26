@@ -189,14 +189,25 @@ class Blob:
         cnt = {n: self.comps[n]['cnt'] for n in comps}
         anchors = [(i, n, bylen[cnt[n]][0]) for i, n in enumerate(comps)
                    if n.endswith('Component') and len(bylen.get(cnt[n], ())) == 1]
+        # A unique run is not always the right one: when a component's array
+        # ends below the next one's first entity, the two merge into a single
+        # longer run, and a stray run elsewhere can match the count instead.
+        # Keep the longest chain of anchors that fit back to back, each
+        # starting at or after the previous one's end; a greedy pass would let
+        # one far-off false anchor push every real one after it out.
+        best = [1] * len(anchors)
+        prev = [-1] * len(anchors)
+        for j, (_, nj, oj) in enumerate(anchors):
+            for i in range(j):
+                _, ni, oi = anchors[i]
+                if oi + cnt[ni] * 4 <= oj and best[i] + 1 > best[j]:
+                    best[j], prev[j] = best[i] + 1, i
         chain = []
-        for i in range(len(anchors)):
-            c = [anchors[i]]
-            for j in range(i + 1, len(anchors)):
-                if anchors[j][2] > c[-1][2]:
-                    c.append(anchors[j])
-            if len(c) > len(chain):
-                chain = c
+        k = max(range(len(anchors)), key=best.__getitem__) if anchors else -1
+        while k >= 0:
+            chain.append(anchors[k])
+            k = prev[k]
+        chain.reverse()
         layout = {n: o for _, n, o in chain}
         segs = [(0, chain[0][0], self.index_at, (chain[0][2] - self.index_at) // 4)]
         for (i1, n1, o1), (i2, _, o2) in zip(chain, chain[1:]):
